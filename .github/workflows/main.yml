@@ -38,3 +38,5 @@ jobs:
             chown -R www-data:www-data /var/www/html/www.empstateweb.com
             chmod -R 775 /var/www/html/www.empstateweb.com
             npm install
+            pm2 start index.js --name "empstateweb" --watch
+            pm2 save
