@@ -3,35 +3,39 @@ const path = require('path');
 const app = express();
 const port = 3000;
 
+// Устанавливаем EJS как шаблонизатор
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
+
 // Устанавливаем директорию для статических файлов
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Отправка главной страницы
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'index.html'));
+  res.render('index');
 });
 
 // Отправка страницы About
 app.get('/about', (req, res) => {
-  res.sendFile(path.join(__dirname, 'about.html'));
+  res.render('about');
 });
 
 // Отправка страницы Services
 app.get('/services', (req, res) => {
-  res.sendFile(path.join(__dirname, 'services.html'));
+  res.render('services');
 });
 
 // Другие маршруты для остальных страниц
 app.get('/pricing', (req, res) => {
-  res.sendFile(path.join(__dirname, 'pricing.html'));
+  res.render('pricing');
 });
 
 app.get('/portfolio', (req, res) => {
-  res.sendFile(path.join(__dirname, 'portfolio.html'));
+  res.render('portfolio');
 });
 
 app.get('/contact', (req, res) => {
-  res.sendFile(path.join(__dirname, 'contact.html'));
+  res.render('contact');
 });
 
 app.get('/manifest.json', (req, res) => {

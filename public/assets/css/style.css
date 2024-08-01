@@ -23,3 +23,333 @@
     width: 100%;
 }
 
+/* pricing */
+.pricing-table {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.pricing-column {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.pricing-column::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-size: cover;
+    background-position: top;
+    opacity: 0.3;
+    border-radius: 8px;
+    z-index: -1;
+}
+
+.pricing-column.basic-website::before {
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Empire_State_Building_%28aerial_view%29.jpg/500px-Empire_State_Building_%28aerial_view%29.jpg');
+}
+
+.pricing-column.advanced-business-site::before {
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Chrysler_Building_by_David_Shankbone_Retouched.jpg/360px-Chrysler_Building_by_David_Shankbone_Retouched.jpg');
+}
+
+.pricing-column.interactive-web-application::before {
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/One_World_Trade_Center_Building_%282021%29.jpg/500px-One_World_Trade_Center_Building_%282021%29.jpg');
+}
+
+.pricing-column.ecommerce-saas-solutions::before {
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Front_view_of_Statue_of_Liberty_with_pedestal_and_base_2024.jpg/500px-Front_view_of_Statue_of_Liberty_with_pedestal_and_base_2024.jpg');
+}
+
+.pricing-column:hover {
+    transform: scale(1.05);
+}
+
+.pricing-column h2 {
+    margin-top: 0;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.pricing-column .price {
+    font-size: 2em;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #1EA5A5;
+}
+
+.pricing-column .term {
+    font-size: 1em;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.pricing-column ul {
+    padding: 0;
+    list-style: none;
+}
+
+.pricing-column ul li {
+    margin-bottom: 10px;
+    line-height: 1.4em;
+    color: #555;
+}
+
+.contact-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #d52027;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.contact-link:hover {
+    background-color: #a3151f;
+}
+
+.disclaimer {
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #555;
+}
+
+.additional-services {
+    margin-top: 20px;
+    list-style: disc;
+    padding-left: 20px;
+}
+
+.additional-services li {
+    margin-bottom: 10px;
+    line-height: 1.4em;
+    color: #555;
+}
+
+@media (max-width: 1024px) {
+    .pricing-table {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .pricing-table {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* Portfolio */
+.portfolio-section {
+    padding-top: 58px;
+    padding-bottom: 62px;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.portfolio-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s;
+    padding: 20px;
+}
+
+.portfolio-card:hover {
+    transform: scale(1.05);
+}
+
+.portfolio-tag {
+    background: #000;
+    color: #fff;
+    padding: 5px;
+    display: block;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 14px;
+    border-radius: 4px;
+}
+
+.portfolio-image-wrap {
+    width: 100%;
+    height: 0;
+    padding-bottom: 62.5%;
+    position: relative;
+}
+
+.portfolio-image-wrap img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.portfolio-card-title {
+    font-size: 1.25em;
+    font-weight: 600;
+    margin: 15px 0 10px;
+    text-align: center;
+}
+
+.portfolio-card-text {
+    padding: 0 15px;
+    font-size: 1em;
+    line-height: 1.5;
+    color: #333;
+    text-align: center;
+}
+
+.portfolio-card-link {
+    display: block;
+    text-align: center;
+    margin: 15px 0;
+    color: #0042ec;
+    text-decoration: underline;
+}
+
+.portfolio-more {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1em;
+    color: #0042ec;
+}
+
+@media (max-width: 1024px) {
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .portfolio-card-title {
+        font-size: 1em;
+    }
+
+    .portfolio-card-text {
+        font-size: 0.9em;
+    }
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+}
+
+.contact-title {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+
+.contact-form {
+    max-width: 800px;
+    margin: 0 auto 40px;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.form-group {
+    flex: 1;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.submit-button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: #1EA5A5;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background-color: #15968e;
+}
+
+.contact-info,
+.customer-service {
+    margin: 40px 0;
+    text-align: center;
+}
+
+.contact-info h3,
+.customer-service h3 {
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    color: #333;
+}
+
+.contact-info p,
+.customer-service p {
+    margin: 5px 0;
+    font-size: 1.1em;
+    color: #555;
+}
+
+.customer-service p a {
+    color: #1EA5A5;
+    text-decoration: none;
+}
+
+.customer-service p a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .form-row {
+        flex-direction: column;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+}
