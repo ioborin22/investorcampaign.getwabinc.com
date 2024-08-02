@@ -353,3 +353,24 @@
         margin-bottom: 15px;
     }
 }
+
+/* header */
+.header {
+    background-color: transparent;
+    transition: background-color 0.5s, opacity 0.5s;
+}
+
+.header.sticky {
+    background-color: rgba(0, 0, 0, 0.9);
+    opacity: 1;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Переход к непрозрачной шапке */
+.header.sticky-solid {
+    background-color: #000;
+}
+
