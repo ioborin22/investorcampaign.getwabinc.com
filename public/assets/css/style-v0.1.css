@@ -369,7 +369,6 @@
     z-index: 1000;
 }
 
-/* Переход к непрозрачной шапке */
 .header.sticky-solid {
     background-color: #000;
 }
