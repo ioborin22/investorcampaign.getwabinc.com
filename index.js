@@ -3,12 +3,12 @@ const path = require('path');
 const app = express();
 const port = 3000;
 
+// Устанавливаем EJS как шаблонизатор
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
+
 // Устанавливаем директорию для статических файлов
 app.use(express.static(path.join(__dirname, 'public')));
-
-// Настраиваем шаблоны EJS
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'ejs');
 
 // Отправка главной страницы
 app.get('/', (req, res) => {
@@ -36,6 +36,10 @@ app.get('/portfolio', (req, res) => {
 
 app.get('/contact', (req, res) => {
   res.render('contact');
+});
+
+app.get('/manifest.json', (req, res) => {
+  res.sendFile(path.join(__dirname, 'manifest.json'));
 });
 
 app.listen(port, () => {
