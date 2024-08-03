@@ -150,10 +150,6 @@
 
 
 /* Portfolio */
-.portfolio-section {
-    padding-top: 58px;
-    padding-bottom: 62px;
-}
 
 .portfolio-grid {
     display: grid;
@@ -254,17 +250,6 @@
 }
 
 /* Contact Section */
-.contact-section {
-    padding: 60px 0;
-    background-color: #f9f9f9;
-}
-
-.contact-title {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-    text-align: center;
-    color: #333;
-}
 
 .contact-form {
     max-width: 800px;
