@@ -2,7 +2,7 @@
 
 # EmpState Web
 
-[EMP State Web](https://empstateweb.com/) is a professional web design and development service provider. We specialize in creating responsive, user-friendly websites that help businesses establish a strong online presence. Our services include custom web development, website maintenance, SEO optimization, and digital marketing strategies tailored to meet your business needs.
+[EmpState Web](https://empstateweb.com/) is a professional web design and development service provider. We specialize in creating responsive, user-friendly websites that help businesses establish a strong online presence. Our services include custom web development, website maintenance, SEO optimization, and digital marketing strategies tailored to meet your business needs.
 
 ## Features
 
