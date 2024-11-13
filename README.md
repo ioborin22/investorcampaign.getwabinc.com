@@ -23,3 +23,8 @@
 ## Contact Us
 
 For more information or to get a quote, visit our [website](https://empstateweb.com/) or contact us directly.
+
+## How to Start the Project
+
+- npm install
+- npm start

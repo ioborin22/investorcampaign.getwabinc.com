@@ -344,20 +344,28 @@
 
 /* header */
 .header {
-    background-color: transparent;
-    transition: background-color 0.5s, opacity 0.5s;
+
+    transition: background-color 0.5s, border-bottom 0.5s;
+}
+
+.header a {
+    color: black;
 }
 
 .header.sticky {
-    background-color: rgba(0, 0, 0, 0.9);
-    opacity: 1;
+    background-color: #fff;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
+    border-bottom: 2px solid black;
 }
 
 .header.sticky-solid {
     background-color: #000;
+}
+
+.header.sticky a {
+    color: black;
 }
 

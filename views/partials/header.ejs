@@ -1,4 +1,4 @@
-<header class="header section" style="background-image: url('./assets/images/header/header-backgraund.webp');">
+<header class="header section">
     <div class="container">
         <div class="flex-row">
             <a href="/" class="header_logo">
@@ -47,3 +47,13 @@
         </ul>
     </div>
 </header>
+<script>
+    window.addEventListener('scroll', function() {
+    const header = document.querySelector('.header');
+    if (window.scrollY > 5) {
+        header.classList.add('sticky');
+    } else {
+        header.classList.remove('sticky');
+    }
+});
+</script>
