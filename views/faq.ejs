@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('partials/meta') %>
+    <link rel="canonical" href="https://www.empstateweb.com/faq"/>
+    <title>FAQ | EmpState Web</title>
+    <meta name="description" content="Find answers to frequently asked questions about our web design, development, and IT services at EmpState Web.">
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="FAQ | EmpState Web"/>
+    <meta property="og:description" content="Get answers to common questions about EmpState Web's services, including custom web design, development, hosting, and IT solutions.">
+    <meta property="og:url" content="https://www.empstateweb.com/faq"/>
+    <meta property="og:site_name" content="EmpState Web"/>
+    <meta property="og:image" content="assets/images/faq/empstate-faqOverviewImage.webp"/>
+    <meta property="og:locale" content="en_US"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:domain" content="empstateweb.com"/>
+    <meta name="twitter:title" content="FAQ | EmpState Web"/>
+    <meta name="twitter:description" content="Learn more about EmpState Web's services by exploring our frequently asked questions.">
+    <meta name="twitter:image" content="assets/images/faq/empstate-faqOverviewImage.webp"/>
+</head>
+<body class="secondary-page">
+    <div class="page">
+        <%- include('partials/header') %>
+        <main class="main">
+            <section class="section">
+                <div class="faq-container">
+                    <h1>Frequently Asked Questions</h1>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">What services do you offer?</div>
+                        <div class="faq-answer">
+                            <p>We provide a range of services including custom web design, web application development, IT solutions, hosting, SEO, and digital marketing. Our goal is to offer tailored solutions for businesses of all sizes.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">How long does it take to complete a project?</div>
+                        <div class="faq-answer">
+                            <p>The timeline depends on the complexity and requirements of your project. A standard website typically takes 4–8 weeks, while larger web applications may take longer. We provide a detailed timeline after understanding your needs.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">Do you offer custom web design?</div>
+                        <div class="faq-answer">
+                            <p>Yes, we specialize in creating custom web designs tailored to your specific goals and brand identity. Each project is unique and reflects your business's vision.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">What is your pricing structure?</div>
+                        <div class="faq-answer">
+                            <p>Our pricing is flexible and project-specific. We provide transparent quotes based on the scope, features, and technical complexity of your requirements.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">Do you offer ongoing support and maintenance?</div>
+                        <div class="faq-answer">
+                            <p>Yes, we provide comprehensive maintenance and support services to ensure your website or application runs smoothly, stays secure, and is up-to-date with the latest technologies.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">Can you help with SEO and digital marketing?</div>
+                        <div class="faq-answer">
+                            <p>Absolutely! Our SEO and digital marketing services are designed to improve your online visibility, increase traffic, and help you achieve your business goals effectively.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">What industries do you work with?</div>
+                        <div class="faq-answer">
+                            <p>We work with a variety of industries including healthcare, real estate, e-commerce, technology, education, and more. Our solutions are adaptable to meet the unique challenges of any sector.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">How can I get started?</div>
+                        <div class="faq-answer">
+                            <p>Getting started is simple! Contact us through our <a href="/contact">contact page</a> to schedule an initial consultation. We’ll discuss your requirements and provide a tailored proposal.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <%- include('partials/footer') %>
+    </div>
+    <script>
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', event => {
+                const faqAnswer = item.nextElementSibling;
+                const allAnswers = document.querySelectorAll('.faq-answer');
+                const allQuestions = document.querySelectorAll('.faq-question');
+
+                allAnswers.forEach(answer => {
+                    if (answer !== faqAnswer) {
+                        answer.classList.remove('open');
+                        answer.style.maxHeight = 0;
+                    }
+                });
+
+                allQuestions.forEach(question => {
+                    if (question !== item) {
+                        question.classList.remove('active');
+                    }
+                });
+
+                faqAnswer.classList.toggle('open');
+                item.classList.toggle('active');
+
+                if (faqAnswer.classList.contains('open')) {
+                    faqAnswer.style.maxHeight = faqAnswer.scrollHeight + "px";
+                } else {
+                    faqAnswer.style.maxHeight = 0;
+                }
+            });
+        });
+    </script>
+</body>
+</html>
