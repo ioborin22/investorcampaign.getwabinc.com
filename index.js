@@ -11,32 +11,57 @@ app.set('views', path.join(__dirname, 'views'));
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Определенные маршруты
-app.get('/', (req, res) => res.render('index'));
-app.get('/about', (req, res) => res.render('about'));
-app.get('/services', (req, res) => res.render('services'));
-app.get('/pricing', (req, res) => res.render('pricing'));
-app.get('/portfolio', (req, res) => res.render('portfolio'));
-app.get('/contact', (req, res) => res.render('contact'));
-app.get('/process', (req, res) => res.render('process'));
-app.get('/guarantee', (req, res) => res.render('guarantee'));
-app.get('/legal-info', (req, res) => res.render('legal-info'));
-app.get('/web-design', (req, res) => res.render('web-design'));
-app.get('/web-app-development', (req, res) =>
-  res.render('web-app-development'),
-);
-app.get('/seo', (req, res) => res.render('seo'));
-app.get('/hosting', (req, res) => res.render('hosting'));
-app.get('/blog', (req, res) => res.render('blog'));
-app.get('/faq', (req, res) => res.render('faq'));
-app.get('/support', (req, res) => res.render('support'));
-app.get('/location', (req, res) => res.render('location'));
-app.get('/careers', (req, res) => res.render('careers'));
-app.get('/privacy-policy', (req, res) => res.render('privacy-policy'));
-app.get('/terms-of-service', (req, res) => res.render('terms-of-service'));
-app.get('/legal-disclaimer', (req, res) => res.render('legal-disclaimer'));
-app.get('/manifest.json', (req, res) =>
-  res.sendFile(path.join(__dirname, 'manifest.json')),
-);
+const routes = [
+  { loc: '/', changefreq: 'daily', priority: 1.0 },
+  { loc: '/about', changefreq: 'weekly', priority: 0.8 },
+  { loc: '/services', changefreq: 'weekly', priority: 0.8 },
+  { loc: '/pricing', changefreq: 'monthly', priority: 0.7 },
+  { loc: '/portfolio', changefreq: 'monthly', priority: 0.7 },
+  { loc: '/contact', changefreq: 'monthly', priority: 0.6 },
+  { loc: '/process', changefreq: 'monthly', priority: 0.6 },
+  { loc: '/guarantee', changefreq: 'monthly', priority: 0.6 },
+  { loc: '/legal-info', changefreq: 'yearly', priority: 0.5 },
+  { loc: '/web-design', changefreq: 'monthly', priority: 0.7 },
+  { loc: '/web-app-development', changefreq: 'monthly', priority: 0.7 },
+  { loc: '/seo', changefreq: 'monthly', priority: 0.7 },
+  { loc: '/hosting', changefreq: 'monthly', priority: 0.6 },
+  { loc: '/blog', changefreq: 'weekly', priority: 0.8 },
+  { loc: '/faq', changefreq: 'yearly', priority: 0.5 },
+  { loc: '/support', changefreq: 'monthly', priority: 0.6 },
+  { loc: '/location', changefreq: 'yearly', priority: 0.5 },
+  { loc: '/careers', changefreq: 'yearly', priority: 0.5 },
+  { loc: '/privacy-policy', changefreq: 'yearly', priority: 0.5 },
+  { loc: '/terms-of-service', changefreq: 'yearly', priority: 0.5 },
+  { loc: '/legal-disclaimer', changefreq: 'yearly', priority: 0.5 },
+];
+
+// Добавляем маршрут для генерации карты сайта
+app.get('/sitemap.xml', (req, res) => {
+  const baseUrl = `${req.protocol}://${req.get('host')}`;
+  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  ${routes
+    .map(
+      (route) => `
+  <url>
+    <loc>${baseUrl}${route.loc}</loc>
+    <changefreq>${route.changefreq}</changefreq>
+    <priority>${route.priority}</priority>
+  </url>
+  `,
+    )
+    .join('')}
+</urlset>`;
+  res.header('Content-Type', 'application/xml');
+  res.send(sitemap);
+});
+
+// Основные маршруты
+routes.forEach((route) => {
+  app.get(route.loc, (req, res) =>
+    res.render(route.loc === '/' ? 'index' : route.loc.substring(1)),
+  );
+});
 
 // Маршрут для страницы 404
 app.get('/404', (req, res) => {
