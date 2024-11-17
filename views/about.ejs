@@ -2,25 +2,85 @@
 <html lang="en">
 <head>
     <%- include('partials/meta') %>
-    <link rel="canonical" href="https://www.empstateweb.com/about"/>
+    <link rel="canonical" href="https://www.empstateweb.com/about" />
     <title>About Us | EmpState Web</title>
-    <meta name="description" content="Learn more about EmpState Web. We are a dedicated team of professionals based in New York, specializing in web development, digital marketing, and more.">
-    <meta property="og:title" content="About Us | EmpState Web"/>
-    <meta property="og:description" content="Learn more about EmpState Web. We are a dedicated team of professionals based in New York, specializing in web development, digital marketing, and more."/>
-    <meta property="og:url" content="https://www.empstateweb.com/about"/>
-    <meta name="twitter:title" content="About Us | EmpState Web"/>
-    <meta name="twitter:description" content="Learn more about EmpState Web. We are a dedicated team of professionals based in New York, specializing in web development, digital marketing, and more."/>
+    <meta name="description" content="Learn more about EmpState Web. We are a dedicated team of professionals based in New York, specializing in web development, digital marketing, and more." />
+    <meta property="og:title" content="About Us | EmpState Web" />
+    <meta property="og:description" content="Learn more about EmpState Web. We are a dedicated team of professionals based in New York, specializing in web development, digital marketing, and more." />
+    <meta property="og:url" content="https://www.empstateweb.com/about" />
+    <meta name="twitter:title" content="About Us | EmpState Web" />
+    <meta name="twitter:description" content="Learn more about EmpState Web. We are a dedicated team of professionals based in New York, specializing in web development, digital marketing, and more." />
+    <style>
+        about-text h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .about-text p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+        .about-content {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .about-image {
+            flex: 1 1 40%;
+            text-align: center;
+        }
+
+        .about-text {
+            flex: 1 1 60%;
+        }
+
+        @media (max-width: 768px) {
+            .about-content {
+                flex-direction: column;
+            }
+            .about-text {
+                margin-top: 400px;
+            }
+        }
+
+        @media (max-width: 668px) {
+            .about-text {
+                margin-top: 300px;
+            }
+        }
+
+        @media (max-width: 568px) {
+            .about-text {
+                margin-top: 250px;
+            }
+        }
+
+        @media (max-width: 468px) {
+            .about-text {
+                margin-top: 200px;
+            }
+        }
+    </style>
 </head>
 <body class="secondary-page">
     <div class="page">
         <%- include('partials/header') %>
         <main class="main">
-            <section class="section">
+            <section class="section about-section">
                 <div class="container">
-                    <h1>About Us</h1>
-                    <p>Welcome to EmpState Web! We are a dedicated team of professionals based in New York, specializing in web development, digital marketing, and more. Our mission is to help businesses grow by providing top-notch digital solutions tailored to their unique needs.</p>
-                    <p>Our expertise spans across various domains including web design, custom web applications, SEO, digital marketing strategies, and AI technology integration. With over 20 years of experience in the industry, we pride ourselves on delivering high-quality services that exceed our clients' expectations.</p>
-                    <p>At EmpState Web, we believe in the power of innovation and creativity. We strive to stay ahead of the curve by continuously adopting the latest technologies and trends in web development and digital marketing. Our goal is to empower your business with cutting-edge solutions that drive success.</p>
+                    <div class="about-content">
+                        <div class="about-image">
+                            <img src="assets/images/about-us.svg" alt="EmpState Web Team" />
+                        </div>
+                        <div class="about-text">
+                            <h1 class="about-title">About Us</h1>
+                            <p>Welcome to <strong>EmpState Web</strong>! We are a dedicated team of professionals based in New York, specializing in web development, digital marketing, and more. Our mission is to help businesses grow by providing top-notch digital solutions tailored to their unique needs.</p>
+                            <p>Our expertise spans across various domains including web design, custom web applications, SEO, digital marketing strategies, and AI technology integration. With over 20 years of experience in the industry, we pride ourselves on delivering high-quality services that exceed our clients' expectations.</p>
+                            <p>At EmpState Web, we believe in the power of innovation and creativity. We strive to stay ahead of the curve by continuously adopting the latest technologies and trends in web development and digital marketing. Our goal is to empower your business with cutting-edge solutions that drive success.</p>
+                        </div>
+                    </div>
                 </div>
             </section>
         </main>
