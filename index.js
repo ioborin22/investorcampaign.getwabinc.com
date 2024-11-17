@@ -31,6 +31,9 @@ app.get('/faq', (req, res) => res.render('faq'));
 app.get('/support', (req, res) => res.render('support'));
 app.get('/location', (req, res) => res.render('location'));
 app.get('/careers', (req, res) => res.render('careers'));
+app.get('/privacy-policy', (req, res) => res.render('privacy-policy'));
+app.get('/terms-of-service', (req, res) => res.render('terms-of-service'));
+app.get('/legal-disclaimer', (req, res) => res.render('legal-disclaimer'));
 app.get('/manifest.json', (req, res) =>
   res.sendFile(path.join(__dirname, 'manifest.json')),
 );
