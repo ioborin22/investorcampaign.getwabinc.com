@@ -37,7 +37,7 @@ const routes = [
 
 // Добавляем маршрут для генерации карты сайта
 app.get('/sitemap.xml', (req, res) => {
-  const baseUrl = `${req.protocol}://${req.get('host')}`;
+  const baseUrl = `https://empstateweb.com`;
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   ${routes
