@@ -10,134 +10,221 @@
     <meta property="og:url" content="https://www.empstateweb.com/services"/>
     <meta name="twitter:title" content="Our Services | EmpState Web"/>
     <meta name="twitter:description" content="Discover the wide range of services offered by EmpState Web. From web design and development to digital marketing and SEO, we provide solutions tailored to your business needs."/>
+    <style>
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #222;
+    text-align: left;
+    font-family:var(--third-family);
+    font-size:clamp(37px,4vw,72px);
+}
+
+
+.grid-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.services-item {
+    padding: 20px;
+}
+
+
+.img-wrap {
+    margin-bottom: 15px;
+}
+
+.img-wrap img {
+    height: 50px;
+}
+
+.services-item h4 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.services-item p {
+    font-size: 0.9rem;
+ 
+    line-height: 1.5;
+}
+
+
+.section.color {
+    background-color: rgba(219, 215, 206, 0.4);
+}
+    </style>
 </head>
 <body class="secondary-page">
     <div class="page">
         <%- include('partials/header') %>
         <main class="main">
             <section class="section">
-                <div class="container">
-                    <h1>Our Services</h1>
-                    <div class="grid-row">
-                        <div class="services_item">
-                            <div class="img-wrap">
-                                <img src="/assets/images/services/chatgpt-6.svg" alt="AI Technology Integration" width="50" height="50" loading="lazy">
-                            </div>
-                            <h4 class="services_item_title">AI Technology Integration</h4>
-                            <p class="services_item_text">Implementing cutting-edge AI technologies to enhance your business operations and customer experiences. From machine learning models to AI-driven analytics, we provide advanced solutions tailored to your needs.</p>
-                        </div>
-                        <div class="services_item">
-                            <div class="img-wrap">
-                                <img src="/assets/images/services/web-design.svg" alt="Web Design and Development" width="50" height="50" loading="lazy">
-                            </div>
-                            <h4 class="services_item_title">New York Web Design and Development</h4>
-                            <p class="services_item_text">Delivering fully responsive (mobile-friendly) and professional web design services. We create impactful small business websites, WordPress sites, and offer comprehensive project management and ongoing support.</p>
-                        </div>
-                        <div class="services_item">
-                            <div class="img-wrap">
-                                <img src="/assets/images/services/web-development.svg" alt="Custom Web App Development" width="50" height="50" loading="lazy">
-                            </div>
-                            <h4 class="services_item_title">Custom Web App Development</h4>
-                            <p class="services_item_text">Developing tailored, database-driven web applications, e-commerce sites, and SaaS (Software as a Service) platforms. All crafted by our expert New York-based developers.</p>
-                        </div>
-                        <div class="services_item">
-                            <div class="img-wrap">
-                                <img src="/assets/images/services/website-hosting.svg" alt="Premium Website Hosting" width="50" height="50" loading="lazy">
-                            </div>
-                            <h4 class="services_item_title">Premium Website Hosting</h4>
-                            <p class="services_item_text">Offering fully managed, high-speed website hosting services with 8-processor servers, solid-state drives, and continuous off-site data backup and protection. Experience top-tier hosting right here in New York.</p>
-                        </div>
-                        <div class="services_item">
-                            <div class="img-wrap">
-                                <img src="/assets/images/services/google-services.svg" alt="Google Services Integration" width="50" height="50" loading="lazy">
-                            </div>
-                            <h4 class="services_item_title">Google Services Integration</h4>
-                            <p class="services_item_text">Setting up and managing Google Workspace (G-Suite), Gmail for business, Google Drive (Cloud Storage), Google Ads (Adwords), and Google My Business (Google Local). Elevate your business with Google’s powerful tools.</p>
-                        </div>
-                        <div class="services_item">
-                            <div class="img-wrap">
-                                <img src="/assets/images/services/seo.svg" alt="SEO and SMO Excellence" width="50" height="50" loading="lazy">
-                            </div>
-                            <h4 class="services_item_title">SEO and SMO Excellence</h4>
-                            <p class="services_item_text">Providing advanced Search Engine Optimization (SEO) and Social Media Optimization (SMO) services. Boost your visibility and engagement with our expert support, including Google My Business (GMB) optimization.</p>
-                        </div>
-                        <div class="services_item">
-                            <div class="img-wrap">
-                                <img src="/assets/images/services/marketing.svg" alt="Digital Marketing Strategies" width="50" height="50" loading="lazy">
-                            </div>
-                            <h4 class="services_item_title">Digital Marketing Strategies</h4>
-                            <p class="services_item_text">Executing strategic search engine marketing (SEM) and social media marketing (SMM). Harness the power of Google Ads, Facebook, Twitter, and LinkedIn advertising to grow your business.</p>
-                        </div>
-                        <div class="services_item">
-                            <div class="img-wrap">
-                                <img src="/assets/images/services/consulting.svg" alt="Digital Strategy Consulting" width="50" height="50" loading="lazy">
-                            </div>
-                            <h4 class="services_item_title">Expert Digital Strategy Consulting</h4>
-                            <p class="services_item_text">With over 20 years of internet-related experience, we offer a unique, consultative approach to help you achieve your business goals. Let’s create a winning digital strategy together.</p>
-                        </div>
-                        <div class="services_item">
-                            <div class="img-wrap">
-                                <img src="/assets/images/services/reputation.svg" alt="Reputation Management Solutions" width="50" height="50" loading="lazy">
-                            </div>
-                            <h4 class="services_item_title">Reputation Management Solutions</h4>
-                            <p class="services_item_text">Monitoring your online presence, responding to reviews (both positive and negative), and managing public relations (PR) efforts to maintain and enhance your business reputation.</p>
-                        </div>
-                        <div class="services_item">
-                            <div class="img-wrap">
-                                <img src="/assets/images/services/social-media.svg" alt="Social Media Management" width="50" height="50" loading="lazy">
-                            </div>
-                            <h4 class="services_item_title">Social Media Management</h4>
-                            <p class="services_item_text">Setting up, integrating, and managing your social media profiles. We create and schedule engaging posts for Facebook, LinkedIn, Twitter, Google My Business, and more.</p>
-                        </div>
-                        <div class="services_item">
-                            <div class="img-wrap">
-                                <img src="/assets/images/services/cloud.svg" alt="Cloud Computing" width="50" height="50" loading="lazy">
-                            </div>
-                            <h4 class="services_item_title">Advanced Cloud Computing</h4>
-                            <p class="services_item_text">Providing digital asset management, cloud hosting, continuous remote file backups, file sharing, synchronization, and collaboration. Secure your data with virtual hard drives in the cloud.</p>
-                        </div>
-                        <div class="services_item">
-                            <div class="img-wrap">
-                                <img src="/assets/images/services/content.svg" alt="Content Creation" width="50" height="50" loading="lazy">
-                            </div>
-                            <h4 class="services_item_title">Professional Content Creation</h4>
-                            <p class="services_item_text">Creating unique, high-quality content tailored to your business. We handle everything from blog posts and articles to press releases, ensuring your content is engaging and authoritative.</p>
-                        </div>
-                        <div class="services_item">
-                            <div class="img-wrap">
-                                <img src="/assets/images/services/video.svg" alt="Video Production and Editing" width="50" height="50" loading="lazy">
-                            </div>
-                            <h4 class="services_item_title">Video Production and Editing</h4>
-                            <p class="services_item_text">Offering professional video editing services, including product demos, YouTube/Vimeo videos, and more. We provide high-quality visuals with copyright-free music, voiceovers, titles, transitions, and special effects.</p>
-                        </div>
-                        <div class="services_item">
-                            <div class="img-wrap">
-                                <img src="/assets/images/services/email.svg" alt="Email Campaign Management" width="50" height="50" loading="lazy">
-                            </div>
-                            <h4 class="services_item_title">Email Campaign Management</h4>
-                            <p class="services_item_text">Designing and managing effective email campaigns, including list management, opt-in forms, newsletters, and drip campaigns. We use platforms like MailChimp and Constant Contact to maximize your reach.</p>
-                        </div>
-                        <div class="services_item">
-                            <div class="img-wrap">
-                                <img src="/assets/images/services/dns.svg" alt="Domain and DNS Services" width="50" height="50" loading="lazy">
-                            </div>
-                            <h4 class="services_item_title">Domain and DNS Services</h4>
-                            <p class="services_item_text">Handling domain name research, registrations, renewals, DNS management, and transfers. We ensure your domain is secure and efficiently managed.</p>
-                        </div>
-                        <div class="services_item">
-                            <div class="img-wrap">
-                                <img src="/assets/images/services/graphic.svg" alt="Graphic Design and Photography" width="50" height="50" loading="lazy">
-                            </div>
-                            <h4 class="services_item_title">Graphic Design and Photography</h4>
-                            <p class="services_item_text">Delivering professional graphic design services, including logo creation, company branding, custom website graphics, and digital photography. We enhance your brand’s visual identity with creative expertise.</p>
-                        </div>
-                    </div>
-                    <div class="flex-row-services">
-                        <a href="/contact" class="project_link black">GET A QUOTE</a>
-                        <a href="tel:+19414020472" class="project_link colors">CALL +1 (941) 402-0472</a>
-                    </div>
+    <div class="container">
+        <h1 class="h1">Our Services</h1>
+
+        <!-- Design -->
+        <h2 class="section-title">Design</h2>
+        <div class="grid-row">
+            <div class="services-item">
+                <div class="img-wrap">
+                    <img src="./assets/images/services/chatgpt-6.svg" alt="AI Technology Integration">
                 </div>
-            </section>
+                <h4>AI Technology Integration</h4>
+                <p>Implementing cutting-edge AI technologies to enhance your business operations and customer experiences.</p>
+            </div>
+            <div class="services-item">
+                <div class="img-wrap">
+                    <img src="./assets/images/services/web-design.svg" alt="Web Design and Development">
+                </div>
+                <h4>Web Design and Development</h4>
+                <p>Delivering fully responsive and professional web design services tailored to your business needs.</p>
+            </div>
+            <div class="services-item">
+                <div class="img-wrap">
+                    <img src="./assets/images/services/web-development.svg" alt="Custom Web App Development">
+                </div>
+                <h4>Custom Web App Development</h4>
+                <p>Building tailored web applications, SaaS platforms, and database-driven systems for your business.</p>
+            </div>
+        </div>
+
+        <!-- Development -->
+        <h2 class="section-title">Development</h2>
+        <div class="grid-row">
+            <div class="services-item">
+                <div class="img-wrap">
+                    <img src="./assets/images/services/web-development.svg" alt="Web Development">
+                </div>
+                <h4>Web Development</h4>
+                <p>Creating robust and scalable web solutions for businesses of all sizes.</p>
+            </div>
+            <div class="services-item">
+                <div class="img-wrap">
+                    <img src="./assets/images/services/mobile-development.svg" alt="Mobile App Development">
+                </div>
+                <h4>Mobile App Development</h4>
+                <p>Designing and developing mobile applications that provide seamless user experiences.</p>
+            </div>
+            <div class="services-item">
+                <div class="img-wrap">
+                    <img src="./assets/images/services/google-services.svg" alt="Google Services Integration">
+                </div>
+                <h4>Google Services Integration</h4>
+                <p>Setting up and managing Google Workspace, Google Ads, and other Google tools to enhance your business.</p>
+            </div>
+        </div>
+
+        <!-- Marketing -->
+        <h2 class="section-title">Marketing</h2>
+        <div class="grid-row">
+            <div class="services-item">
+                <div class="img-wrap">
+                    <img src="./assets/images/services/seo.svg" alt="SEO and SMO Excellence">
+                </div>
+                <h4>SEO and SMO Excellence</h4>
+                <p>Optimizing your online presence with advanced SEO and social media strategies.</p>
+            </div>
+            <div class="services-item">
+                <div class="img-wrap">
+                    <img src="./assets/images/services/marketing.svg" alt="Digital Marketing Strategies">
+                </div>
+                <h4>Digital Marketing Strategies</h4>
+                <p>Executing effective search engine and social media marketing campaigns to grow your business.</p>
+            </div>
+            <div class="services-item">
+                <div class="img-wrap">
+                    <img src="./assets/images/services/social-media.svg" alt="Social Media Management">
+                </div>
+                <h4>Social Media Management</h4>
+                <p>Managing your social media profiles and creating engaging posts for all platforms.</p>
+            </div>
+        </div>
+
+        <!-- Consulting -->
+        <h2 class="section-title">Consulting</h2>
+        <div class="grid-row">
+            <div class="services-item">
+                <div class="img-wrap">
+                    <img src="./assets/images/services/consulting.svg" alt="Digital Strategy Consulting">
+                </div>
+                <h4>Digital Strategy Consulting</h4>
+                <p>Helping you create a winning digital strategy to achieve your business goals.</p>
+            </div>
+            <div class="services-item">
+                <div class="img-wrap">
+                    <img src="./assets/images/services/reputation.svg" alt="Reputation Management Solutions">
+                </div>
+                <h4>Reputation Management Solutions</h4>
+                <p>Enhancing your online reputation with review monitoring and public relations efforts.</p>
+            </div>
+            <div class="services-item">
+                <div class="img-wrap">
+                    <img src="./assets/images/services/email.svg" alt="Email Campaign Management">
+                </div>
+                <h4>Email Campaign Management</h4>
+                <p>Designing and managing impactful email campaigns to engage your audience effectively.</p>
+            </div>
+        </div>
+
+        <!-- Content and Multimedia -->
+        <h2 class="section-title">Content and Multimedia</h2>
+        <div class="grid-row">
+            <div class="services-item">
+                <div class="img-wrap">
+                    <img src="./assets/images/services/content.svg" alt="Content Creation">
+                </div>
+                <h4>Content Creation</h4>
+                <p>Creating high-quality content, from blog posts to press releases, tailored to your business needs.</p>
+            </div>
+            <div class="services-item">
+                <div class="img-wrap">
+                    <img src="./assets/images/services/video.svg" alt="Video Production and Editing">
+                </div>
+                <h4>Video Production and Editing</h4>
+                <p>Providing professional video production and editing services for various platforms.</p>
+            </div>
+            <div class="services-item">
+                <div class="img-wrap">
+                    <img src="./assets/images/services/graphic.svg" alt="Graphic Design and Photography">
+                </div>
+                <h4>Graphic Design and Photography</h4>
+                <p>Offering graphic design services and professional photography to elevate your brand.</p>
+            </div>
+        </div>
+
+        <!-- Domain and Technical Services -->
+        <h2 class="section-title">Domain and Technical Services</h2>
+        <div class="grid-row">
+            <div class="services-item">
+                <div class="img-wrap">
+                    <img src="./assets/images/services/dns.svg" alt="Domain and DNS Services">
+                </div>
+                <h4>Domain and DNS Services</h4>
+                <p>Managing your domain and DNS configurations to ensure reliability and security.</p>
+            </div>
+            <div class="services-item">
+                <div class="img-wrap">
+                    <img src="./assets/images/services/cloud.svg" alt="Cloud Computing">
+                </div>
+                <h4>Cloud Computing</h4>
+                <p>Providing cloud hosting, file backups, and collaboration tools for your business.</p>
+            </div>
+            <div class="services-item">
+                <div class="img-wrap">
+                    <img src="./assets/images/services/advanced-cloud.svg" alt="Advanced Cloud Infrastructure">
+                </div>
+                <h4>Advanced Cloud Infrastructure</h4>
+                <p>Delivering robust and scalable cloud solutions tailored to your business needs.</p>
+            </div>
+        </div>
+    </div>
+</section>
         </main>
         <%- include('partials/footer') %>
     </div>
