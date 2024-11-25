@@ -19,7 +19,7 @@ jobs:
           username: 'root'
           password: ${{ secrets.SERVER_PASSWORD }}
           source: "."
-          target: "/var/www/html/www.empstateweb.com"
+          target: "/home/userwww/web/empstateweb.com/public_html"
           strip_components: 1
           excludes: |
             .git/**
@@ -34,9 +34,9 @@ jobs:
           password: ${{ secrets.SERVER_PASSWORD }}
           command_timeout: 90m
           script: |
-            cd /var/www/html/www.empstateweb.com
-            chown -R www-data:www-data /var/www/html/www.empstateweb.com
-            chmod -R 775 /var/www/html/www.empstateweb.com
+            cd /home/userwww/web/empstateweb.com/public_html
+            chown -R www-data:www-data /home/userwww/web/empstateweb.com/public_html
+            chmod -R 775 /home/userwww/web/empstateweb.com/public_html
             npm install
             pm2 start index.js --name "empstateweb" --watch
             pm2 save
