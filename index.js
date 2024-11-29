@@ -90,8 +90,8 @@ app.post('/submit-contact-form', async (req, res) => {
   });
 
   const mailOptions = {
-    from: '"EmpState Web" <support@empstateweb.com>',
-    to: 'support@empstateweb.com',
+    from: `"${firstName}" <${email}>`, // Используем email пользователя как отправителя
+    to: 'support@empstateweb.com', // Ваш email для получения сообщений
     subject: 'New Contact Form Submission',
     html: `
       <h2>Contact Form Submission</h2>
@@ -104,7 +104,7 @@ app.post('/submit-contact-form', async (req, res) => {
 
   try {
     await transporter.sendMail(mailOptions);
-    res.render('/thank-you'); // Перенаправляем на страницу благодарности
+    res.redirect('/thank-you'); // Перенаправляем на страницу "Спасибо"
   } catch (error) {
     console.error('Error sending email:', error);
     res.status(500).send('Failed to send the message.');
