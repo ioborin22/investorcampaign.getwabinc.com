@@ -1,5 +1,8 @@
 const express = require('express');
 const path = require('path');
+const bodyParser = require('body-parser');
+const nodemailer = require('nodemailer');
+
 const app = express();
 const port = 3000;
 
@@ -9,6 +12,10 @@ app.set('views', path.join(__dirname, 'views'));
 
 // Устанавливаем директорию для статических файлов
 app.use(express.static(path.join(__dirname, 'public')));
+
+// Middleware для обработки данных формы
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 
 // Определенные маршруты
 const routes = [
@@ -63,6 +70,48 @@ routes.forEach((route) => {
   );
 });
 
+// Маршрут для отправки контактной формы
+app.post('/submit-contact-form', async (req, res) => {
+  const { 'first-name': firstName, email, phone, message } = req.body;
+
+  // Настройка Nodemailer
+  const transporter = nodemailer.createTransport({
+    host: 'mail.empstateweb.com',
+    port: 465,
+    secure: true,
+    auth: {
+      user: 'support@empstateweb.com',
+      pass: 'V%614ed5e692607d',
+    },
+  });
+
+  const mailOptions = {
+    from: '"EmpState Web" <support@empstateweb.com>',
+    to: 'support@empstateweb.com',
+    subject: 'New Contact Form Submission',
+    html: `
+      <h2>Contact Form Submission</h2>
+      <p><strong>First Name:</strong> ${firstName}</p>
+      <p><strong>Email:</strong> ${email}</p>
+      <p><strong>Phone:</strong> ${phone}</p>
+      <p><strong>Message:</strong><br>${message}</p>
+    `,
+  };
+
+  try {
+    await transporter.sendMail(mailOptions);
+    res.render('thank-you'); // Перенаправляем на страницу благодарности
+  } catch (error) {
+    console.error('Error sending email:', error);
+    res.status(500).send('Failed to send the message.');
+  }
+});
+
+// Маршрут для страницы благодарности
+app.get('/thank-you', (req, res) => {
+  res.render('thank-you');
+});
+
 // Маршрут для страницы 404
 app.get('/404', (req, res) => {
   res.status(404).render('404');
@@ -73,6 +122,7 @@ app.use((req, res) => {
   res.redirect('/404');
 });
 
+// Запуск сервера
 app.listen(port, () => {
   console.log(`Server is running at http://localhost:${port}`);
 });
