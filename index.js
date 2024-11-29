@@ -70,6 +70,10 @@ routes.forEach((route) => {
   );
 });
 
+app.get('/thank-you', (req, res) => {
+  res.render('thank-you'); // Отображает шаблон "thank-you.ejs"
+});
+
 // Маршрут для отправки контактной формы
 app.post('/submit-contact-form', async (req, res) => {
   const { 'first-name': firstName, email, phone, message } = req.body;
@@ -100,7 +104,7 @@ app.post('/submit-contact-form', async (req, res) => {
 
   try {
     await transporter.sendMail(mailOptions);
-    res.render('thank-you'); // Перенаправляем на страницу благодарности
+    res.render('/thank-you'); // Перенаправляем на страницу благодарности
   } catch (error) {
     console.error('Error sending email:', error);
     res.status(500).send('Failed to send the message.');
