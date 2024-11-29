@@ -34,10 +34,25 @@ jobs:
           password: ${{ secrets.SERVER_PASSWORD }}
           command_timeout: 90m
           script: |
+            # Загружаем nvm
+            export NVM_DIR="/root/.nvm"
+            [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # Это загружает nvm
+
+            # Устанавливаем правильный путь для npm и pm2
+            export PATH="/root/.nvm/versions/node/v21.0.0/bin:$PATH"
+
+            # Проверяем доступность команд
+            echo "Using npm: $(which npm)"
+            echo "Using pm2: $(which pm2)"
+
+            # Переходим в папку проекта
             cd /home/userwww/web/empstateweb.com/public_html
+
+            # Устанавливаем права
             chown -R www-data:www-data /home/userwww/web/empstateweb.com/public_html
             chmod -R 775 /home/userwww/web/empstateweb.com/public_html
+
+            # Устанавливаем зависимости и запускаем PM2
             npm install
-            pm2 start index.js --name "empstateweb" --watch
+            pm2 start index.js --name "empstateweb" --watch || pm2 restart empstateweb
             pm2 save
-            
