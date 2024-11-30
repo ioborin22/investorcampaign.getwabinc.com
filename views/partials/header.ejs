@@ -57,4 +57,15 @@
         header.classList.remove('sticky');
     }
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const menuLinks = document.querySelectorAll(".header_menu li a");
+    const currentUrl = window.location.pathname;
+
+    menuLinks.forEach(link => {
+        if (link.getAttribute("href") !== "/" && link.getAttribute("href") === currentUrl) {
+            link.classList.add("active");
+        }
+    });
+});
 </script>
