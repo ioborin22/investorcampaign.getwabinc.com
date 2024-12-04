@@ -90,9 +90,9 @@
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 1000;
+
     border-bottom: 2px solid black;
-    backdrop-filter: blur(5px);
+    /* backdrop-filter: blur(5px); */
 }
 
 .header.sticky-solid {
