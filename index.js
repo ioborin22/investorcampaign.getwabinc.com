@@ -40,6 +40,7 @@ const routes = [
   { loc: '/privacy-policy', changefreq: 'yearly', priority: 0.5 },
   { loc: '/terms-of-service', changefreq: 'yearly', priority: 0.5 },
   { loc: '/legal-disclaimer', changefreq: 'yearly', priority: 0.5 },
+  { loc: '/web-ready-plan', changefreq: 'yearly', priority: 0.5 },
 ];
 
 // Добавляем маршрут для генерации карты сайта
@@ -108,6 +109,61 @@ app.post('/submit-contact-form', async (req, res) => {
   } catch (error) {
     console.error('Error sending email:', error);
     res.status(500).send('Failed to send the message.');
+  }
+});
+
+// Отправка формы 
+app.post('/submit-web-ready-form', async (req, res) => {
+  const { name, email, phone } = req.body;
+
+  // Настройка Nodemailer
+  const transporter = nodemailer.createTransport({
+    host: 'mail.empstateweb.com',
+    port: 465,
+    secure: true,
+    auth: {
+      user: 'support@empstateweb.com',
+      pass: 'V%614ed5e692607d',
+    },
+  });
+
+  // Письмо в поддержку
+  const supportMailOptions = {
+    from: `"Web-Ready Plan" <${email}>`,
+    to: 'support@empstateweb.com',
+    subject: 'Web-Ready Plan Submission',
+    html: `
+      <p><strong>Name:</strong> ${name}</p>
+      <p><strong>Email:</strong> ${email}</p>
+      <p><strong>Phone:</strong> ${phone}</p>
+    `,
+  };
+
+  // Письмо клиенту
+  const clientMailOptions = {
+    from: 'support@empstateweb.com',
+    to: email,
+    subject: 'Your Web-Ready Plan Request',
+    html: `
+      <p>Dear ${name},</p>
+      <p>Thank you for requesting our Web-Ready Plan. Our team has received your request and will contact you shortly.</p>
+      <p>If you have any additional questions, feel free to reply to this email.</p>
+      <br>
+      <p>Best regards,<br>Web-Ready Team</p>
+    `,
+  };
+
+  try {
+    // Отправка письма в поддержку
+    await transporter.sendMail(supportMailOptions);
+
+    // Отправка письма клиенту
+    await transporter.sendMail(clientMailOptions);
+
+    res.status(200).json({ success: true });
+  } catch (error) {
+    console.error('Error sending email:', error);
+    res.status(500).json({ success: false });
   }
 });
 
