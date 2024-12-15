@@ -227,15 +227,7 @@
     z-index: -1;
 }
 
-.pricing-column.basic-website {
-    position: relative; /* Устанавливаем позиционирование для родительского блока */
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    margin: 20px;
-}
-
-.pricing-column.basic-website {
+.pricing-column. {
     position: relative;
     padding: 20px;
     border: 1px solid #ddd;
@@ -243,7 +235,15 @@
     margin: 20px;
 }
 
-.pricing-column.basic-website .logos {
+.pricing-column. {
+    position: relative;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.pricing-column .logos {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -251,7 +251,7 @@
     margin-top: 20px;
 }
 
-.pricing-column.basic-website .logo {
+.pricing-column .logo {
     width: auto;
     height: 50px;
 }
