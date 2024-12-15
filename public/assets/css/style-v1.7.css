@@ -228,7 +228,7 @@
 }
 
 .pricing-column.basic-website::before {
-    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Empire_State_Building_%28aerial_view%29.jpg/500px-Empire_State_Building_%28aerial_view%29.jpg');
+    background-image: url('./assets/images/services/wordpress-drupal-joomla.webp');
 }
 
 .pricing-column.advanced-business-site::before {
