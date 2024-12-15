@@ -228,7 +228,7 @@
 }
 
 .pricing-column.basic-website::before {
-    background-image: url('./assets/images/services/wordpress-drupal-joomla.webp');
+    background-image: url('https://www.empstateweb.com/assets/images/services/wordpress-drupal-joomla.webp');
 }
 
 .pricing-column.advanced-business-site::before {
