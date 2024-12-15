@@ -227,7 +227,7 @@
     z-index: -1;
 }
 
-.pricing-column. {
+.pricing-column {
     position: relative;
     padding: 20px;
     border: 1px solid #ddd;
@@ -235,7 +235,7 @@
     margin: 20px;
 }
 
-.pricing-column. {
+.pricing-column {
     position: relative;
     padding: 20px;
     border: 1px solid #ddd;
@@ -247,6 +247,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     gap: 15px;
     margin-top: 20px;
 }
