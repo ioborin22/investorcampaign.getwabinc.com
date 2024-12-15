@@ -227,6 +227,35 @@
     z-index: -1;
 }
 
+.pricing-column.basic-website {
+    position: relative; /* Устанавливаем позиционирование для родительского блока */
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.pricing-column.basic-website {
+    position: relative;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.pricing-column.basic-website .logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.pricing-column.basic-website .logo {
+    width: auto;
+    height: 50px;
+}
+
 .pricing-column:hover {
     transform: scale(1.05);
 }
