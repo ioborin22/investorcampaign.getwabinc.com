@@ -40,7 +40,7 @@ const routes = [
   { loc: '/privacy-policy', changefreq: 'yearly', priority: 0.5 },
   { loc: '/terms-of-service', changefreq: 'yearly', priority: 0.5 },
   { loc: '/legal-disclaimer', changefreq: 'yearly', priority: 0.5 },
-  { loc: '/web-ready-plan', changefreq: 'yearly', priority: 0.5 },
+  // { loc: '/web-ready-plan', changefreq: 'yearly', priority: 0.5 },
 ];
 
 // Добавляем маршрут для генерации карты сайта
