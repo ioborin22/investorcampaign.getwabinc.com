@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('partials/meta') %>
+    <link rel="canonical" href="/aboutus.html" />
+    <title>About Us - NovaComp Engineering, Inc.</title>
+    <meta name="author" content="NovaComp Engineering, Inc." />
+    <meta
+      name="description"
+      content="Meet the team of expert engineers at NovaComp Engineering, Inc., including our principal and supporting engineers."
+    />
+    <meta
+      name="keywords"
+      content="NovaComp Engineering, team, principal engineers, supporting engineers, stress analysis, thermal analysis"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="About Us - NovaComp Engineering, Inc." />
+    <meta
+      property="og:description"
+      content="Meet the team of expert engineers at NovaComp Engineering, Inc., including our principal and supporting engineers."
+    />
+    <meta property="og:url" content="/aboutus.html" />
+    <meta property="og:site_name" content="NovaComp Engineering, Inc." />
+  </head>
+  <body>
+    <div class="page">
+      <button class="menu-toggle">☰ Menu</button>
+      <div class="sidebar">
+        <div class="menu">
+          <button
+            class="menu-button"
+            onclick="window.location.href='aboutus.html';"
+          >
+            Staff
+          </button>
+          <button
+            class="menu-button"
+            onclick="window.location.href='resources.html';"
+          >
+            Resources
+          </button>
+          <button
+            class="menu-button"
+            onclick="window.location.href='expertise.html';"
+          >
+            Expertise
+          </button>
+          <button
+            class="menu-button"
+            onclick="window.location.href='clients.html';"
+          >
+            Clients
+          </button>
+          <button
+            class="menu-button"
+            onclick="window.location.href='form.html';"
+          >
+            Ask Us
+          </button>
+        </div>
+      </div>
+      <div class="content">
+        <header>
+          <a href="/">
+            <img
+              class="header-logo"
+              src="assets/images/ask_ban.gif"
+              alt="NovaComp Engineering, Inc."
+            />
+          </a>
+          <h1 class="title">About Us</h1>
+        </header>
+        <main>
+          <h2>Principal Engineers</h2>
+          <section>
+            <h3>Nils Juhlin - President</h3>
+            <p>
+              Ph. D. in M.E., P.E.; Expertise in stress analysis, heat transfer,
+              dynamic analysis, composites, finite element analysis, material
+              testing, and software development. Aerospace industry experience.
+            </p>
+            <p>
+              Email:
+              <a href="mailto:nils@nceinc.com" class="email-link"
+                >nils@nceinc.com</a
+              >
+            </p>
+          </section>
+          <section>
+            <h3>Mark Lobo - Senior Thermal/Fluids Analyst</h3>
+            <p>
+              Ph. D. in M.E.; Expertise in heat transfer, thermodynamics,
+              combustion, finite element analysis, computational fluid dynamics,
+              and numerical modeling of mechanical systems.
+            </p>
+            <p>
+              Email:
+              <a href="mailto:mark@nceinc.com" class="email-link"
+                >mark@nceinc.com</a
+              >
+            </p>
+          </section>
+          <h2>Supporting Engineers</h2>
+          <section>
+            <h3>Randy Kent</h3>
+            <p>
+              M.S.Met.E., P.E.; Expertise in failure analysis and material
+              analysis. Experience in the manufacturing and marine industries.
+            </p>
+          </section>
+          <section>
+            <h3>Tim O’Neill</h3>
+            <p>
+              M.S.M.E.; Data acquisition specialist with expertise in strain,
+              motion, temperature, and flow measurements.
+            </p>
+          </section>
+          <section>
+            <h3>Eric Easterbrook</h3>
+            <p>
+              B.S.A.A.; Expertise in fatigue, fracture, and fatigue life
+              improvement methods. Aerospace industry experience.
+            </p>
+          </section>
+        </main>
+        <%- include('partials/footer') %>
+      </div>
+    </div>
+    <script>
+      document
+        .querySelector('.menu-toggle')
+        .addEventListener('click', function () {
+          document.querySelector('.sidebar').classList.toggle('show');
+        });
+    </script>
+  </body>
+</html>

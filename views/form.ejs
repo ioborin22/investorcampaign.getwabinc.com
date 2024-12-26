@@ -14,10 +14,7 @@
       content="NovaComp, contact form, engineering solutions, heat transfer, stress analysis"
     />
     <meta property="og:type" content="website" />
-    <meta
-      property="og:title"
-      content="Information Request Form - NovaComp Engineering, Inc."
-    />
+    <meta property="og:title" content="Information Request Form - NovaComp Engineering, Inc." />
     <meta
       property="og:description"
       content="Contact NovaComp Engineering for solutions in heat transfer, stress analysis, structural dynamics, and fluid flow."
@@ -71,20 +68,37 @@
               alt="NovaComp Engineering, Inc."
             />
           </a>
-          <h1 class="title">Thank You!</h1>
+          <h1 class="title">Information Request Form</h1>
         </header>
         <main>
-          <p class="text" style="color: #4caf50">
-            Your message has been successfully sent to our support team. We will
-            get back to you as soon as possible.
+          <p>
+            Let us know if you have an engineering problem requiring a solution
+            in the fields of heat transfer, stress analysis, structural dynamics
+            and fluid flow.
           </p>
-          <button
-            onclick="window.location.href='/'"
-            class="project_link yellow"
-            style="cursor: pointer"
-          >
-            Back to Home
-          </button>
+          <form action="/submit-form" method="POST" class="contact-form">
+            <div class="form-group">
+              <label for="email">Email Address:</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div class="form-group">
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+            <div class="form-group">
+              <label for="company">Company Name:</label>
+              <input type="text" id="company" name="company" />
+            </div>
+            <div class="form-group">
+              <label for="phone">Business Telephone:</label>
+              <input type="tel" id="phone" name="phone" />
+            </div>
+            <div class="form-group">
+              <label for="message">Describe your problem:</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="submit-button">Submit Request</button>
+          </form>
         </main>
         <%- include('partials/footer') %>
       </div>

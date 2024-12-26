@@ -2,35 +2,76 @@
 <html lang="en">
 <head>
     <%- include('partials/meta') %>
-    <link rel="canonical" href="https://www.empstateweb.com/404"/>
-    <title>404 - Page Not Found | EmpState Web</title>
-    <meta name="description" content="Sorry, the page you are looking for does not exist. Explore EmpState Web for our services and expertise in web development and digital marketing.">
-    <meta property="og:title" content="404 - Page Not Found | EmpState Web"/>
-    <meta property="og:description" content="Sorry, the page you are looking for does not exist. Explore EmpState Web for our services and expertise in web development and digital marketing."/>
-    <meta property="og:url" content="https://www.empstateweb.com/404"/>
-    <meta name="twitter:title" content="404 - Page Not Found | EmpState Web"/>
-    <meta name="twitter:description" content="Sorry, the page you are looking for does not exist. Explore EmpState Web for our services and expertise in web development and digital marketing."/>
-    <style>
-        .container {
-            margin-bottom: 100px;
-        }
-    </style>
-</head>
-<body class="secondary-page">
+    <link rel="canonical" href="/404.html"/>
+    <title>404 - Page Not Found</title>
+    <meta name="description" content="Sorry, the page you are looking for does not exist.">
+    <meta property="og:title" content="404 - Page Not Found"/>
+    <meta property="og:description" content="Sorry, the page you are looking for does not exist."/>
+    <meta property="og:url" content="/404.html"/>
+    <meta name="twitter:title" content="404 - Page Not Found"/>
+    <meta name="twitter:description" content="Sorry, the page you are looking for does not exist."/>
+  </head>
+
+    <body>
     <div class="page">
-        <%- include('partials/header') %>
-        <main class="main">
-            <section class="section">
-                <div class="container">
-                    <h1 class="h1">404 - Page Not Found</h1>
+      <button class="menu-toggle">☰ Menu</button>
+      <div class="sidebar">
+        <div class="menu">
+          <button
+            class="menu-button"
+            onclick="window.location.href='aboutus.html';"
+          >
+            Staff
+          </button>
+          <button
+            class="menu-button"
+            onclick="window.location.href='resources.html';"
+          >
+            Resources
+          </button>
+          <button
+            class="menu-button"
+            onclick="window.location.href='expertise.html';"
+          >
+            Expertise
+          </button>
+          <button
+            class="menu-button"
+            onclick="window.location.href='clients.html';"
+          >
+            Clients
+          </button>
+          <button
+            class="menu-button"
+            onclick="window.location.href='form.html';"
+          >
+            Ask Us
+          </button>
+        </div>
+      </div>
+      <div class="content">
+        <header>
+          <a href="/">
+            <img
+              class="header-logo"
+              src="assets/images/NCE_Logo.gif"
+              alt="NovaComp Engineering, Inc."
+            />
+          </a>
+          <h1 class="title">404 - Page Not Found</h1>
+        </header>
+        
                     <p class="text">Sorry, the page you are looking for does not exist. It might have been moved or deleted.</p>
                     <p class="text">Please check the URL and try again, or use the button below to go back to our homepage.</p>
                     <button onclick="window.location.href='/'" class="project_link yellow" style="cursor: pointer;">Back to Home</button>
-                </div>
-            </section>
-        </main>
-        <%- include('partials/footer') %>
+      </div>
     </div>
-    <script src="assets/js/app.js"></script>
-</body>
+    <script>
+      document
+        .querySelector('.menu-toggle')
+        .addEventListener('click', function () {
+          document.querySelector('.sidebar').classList.toggle('show');
+        });
+    </script>
+  </body>
 </html>

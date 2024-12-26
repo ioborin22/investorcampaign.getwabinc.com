@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('partials/meta') %>
+    <link rel="canonical" href="/expertise.html" />
+    <title>Expertise - NovaComp Engineering, Inc.</title>
+    <meta name="author" content="NovaComp Engineering, Inc." />
+    <meta
+      name="description"
+      content="Explore the structural, thermal, and fluid analysis expertise of NovaComp Engineering, Inc."
+    />
+    <meta
+      name="keywords"
+      content="NovaComp, expertise, structural analysis, thermal analysis, data acquisition, computing"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Expertise - NovaComp Engineering, Inc." />
+    <meta
+      property="og:description"
+      content="Explore the structural, thermal, and fluid analysis expertise of NovaComp Engineering, Inc."
+    />
+    <meta property="og:url" content="/expertise.html" />
+    <meta property="og:site_name" content="NovaComp Engineering, Inc." />
+  </head>
+  <body>
+    <div class="page">
+      <button class="menu-toggle">☰ Menu</button>
+      <div class="sidebar">
+        <div class="menu">
+          <button
+            class="menu-button"
+            onclick="window.location.href='aboutus.html';"
+          >
+            Staff
+          </button>
+          <button
+            class="menu-button"
+            onclick="window.location.href='resources.html';"
+          >
+            Resources
+          </button>
+          <button
+            class="menu-button"
+            onclick="window.location.href='expertise.html';"
+          >
+            Expertise
+          </button>
+          <button
+            class="menu-button"
+            onclick="window.location.href='clients.html';"
+          >
+            Clients
+          </button>
+          <button
+            class="menu-button"
+            onclick="window.location.href='form.html';"
+          >
+            Ask Us
+          </button>
+        </div>
+      </div>
+      <div class="content">
+        <header>
+          <a href="/">
+            <img
+              class="header-logo"
+              src="assets/images/expert_ban.gif"
+              alt="NovaComp Engineering, Inc."
+            />
+          </a>
+          <h1 class="title">Expertise</h1>
+        </header>
+        <main>
+          <div class="expertise-container">
+            <section>
+              <h2 class="expertise-title">Structural</h2>
+              <ul>
+                <li>Theoretical stress analysis</li>
+                <li>Thermal stress analysis</li>
+                <li>Thermal shock of brittle materials</li>
+                <li>Ceramic-metal joint analysis</li>
+                <li>Statistical failure analysis</li>
+                <li>Composites</li>
+                <li>Elastomers</li>
+                <li>Plastics</li>
+                <li>Ceramic matrix composites</li>
+                <li>Fatigue and fracture mechanics</li>
+                <li>Buckling analysis</li>
+                <li>Modal analysis</li>
+                <li>Vibration analysis</li>
+                <li>Impact and crash analysis</li>
+                <li>Metal forming analysis</li>
+              </ul>
+            </section>
+            <section>
+              <h2 class="expertise-title">Thermal & Fluids</h2>
+              <ul>
+                <li>Conduction heat transfer analysis</li>
+                <li>Convection heat transfer analysis</li>
+                <li>Radiation heat transfer analysis</li>
+                <li>Transient thermal analysis</li>
+                <li>Thermodynamics & Combustion</li>
+                <li>Computational fluid dynamics</li>
+              </ul>
+            </section>
+            <section>
+              <h2 class="expertise-title">Data Acquisition</h2>
+              <ul>
+                <li>Strain measurements</li>
+                <li>Displacement measurements</li>
+                <li>Pressure and flow measurements</li>
+                <li>Temperature measurements</li>
+              </ul>
+            </section>
+            <section>
+              <h2 class="expertise-title">Computing</h2>
+              <ul>
+                <li>BASIC, FORTRAN, C, C++, Windows, Windows NT</li>
+                <li>PCs, Sun workstations</li>
+                <li>AutoCAD</li>
+                <li>FEA - linear and nonlinear with MARC</li>
+              </ul>
+            </section>
+            <section>
+              <h2 class="expertise-title">Miscellaneous</h2>
+              <ul>
+                <li>Material analysis</li>
+                <li>FEA technical support and training for MARC</li>
+              </ul>
+            </section>
+          </div>
+          <div class="collage">
+            <img
+              src="assets/images/collage.gif"
+              alt="NCE Figure Collage"
+              class="collage-image"
+            />
+            <p>
+              NovaComp Engineering uses state of the art computer programs to
+              analyze complex structural, thermal, and fluid engineering
+              problems.
+            </p>
+          </div>
+        </main>
+        <%- include('partials/footer') %>
+      </div>
+    </div>
+    <script>
+      document
+        .querySelector('.menu-toggle')
+        .addEventListener('click', function () {
+          document.querySelector('.sidebar').classList.toggle('show');
+        });
+    </script>
+  </body>
+</html>

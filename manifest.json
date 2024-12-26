@@ -1,19 +1,19 @@
 {
-    "name": "Empire State Web Development",
-    "short_name": "EmpStateWeb",
+    "name": "NovaComp Engineering, Inc. - Bothell, WA",
+    "short_name": "NovaComp Engineering, Inc.",
     "start_url": "/",
     "display": "standalone",
     "background_color": "#ffffff",
     "theme_color": "#000000",
-    "description": "Providing professional web design and development services in New York. Elevate your online presence with bespoke solutions crafted to meet your business needs.",
+    "description": "vaComp Engineering, Inc. - Accurate and cost-efficient engineering services.",
     "icons": [
       {
-        "src": "/assets/images/empstateweb.svg",
+        "src": "/assets/images/nceinc.svg",
         "sizes": "192x192",
         "type": "image/svg+xml"
       },
       {
-        "src": "/assets/images/empstateweb.svg",
+        "src": "/assets/images/nceinc.svg",
         "sizes": "512x512",
         "type": "image/svg+xml"
       }
