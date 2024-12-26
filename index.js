@@ -52,7 +52,7 @@ app.post('/submit-form', async (req, res) => {
     secure: true,
     auth: {
       user: 'support@empstateweb.com',
-      pass: 'V%614ed5e692607d', // Replace with your secure password
+      pass: '', // Replace with your secure password
     },
   });
 
