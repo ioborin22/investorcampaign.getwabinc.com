@@ -1,29 +1,40 @@
-![EmpState Web](https://www.empstateweb.com/assets/images/header/primaryImageOfPage.webp)
+# NovaComp Engineering, Inc. Website
 
-# EmpState Web
+This repository contains the source code for the official website of **NovaComp Engineering, Inc.**, a company specializing in accurate and cost-efficient engineering services, including heat transfer, stress analysis, structural dynamics, and fluid flow.
 
-[EmpState Web](https://www.empstateweb.com/) is a professional web design and development service provider. We specialize in creating responsive, user-friendly websites that help businesses establish a strong online presence. Our services include custom web development, website maintenance, SEO optimization, and digital marketing strategies tailored to meet your business needs.
+The website provides information about:
+- The company and its staff.
+- Available resources and technical expertise.
+- The client list and notable projects.
+- A contact form for inquiries and support.
+
+## Live Preview
+
+You can view the test deployment of the website at:  
+[https://nceinc.getwabinc.com/](https://nceinc.getwabinc.com/)
 
 ## Features
 
-- **Custom Web Development**: Tailored web solutions built with the latest technologies.
-- **Responsive Design**: Mobile-friendly websites that look great on all devices.
-- **SEO Optimization**: Improve your website's search engine ranking and visibility.
-- **Digital Marketing**: Comprehensive strategies to enhance your online presence.
-- **Website Maintenance**: Ongoing support and updates to keep your website running smoothly.
+- **Responsive Design**: The website adapts to different screen sizes, ensuring a seamless experience on desktop and mobile devices.
+- **Contact Form**: Visitors can submit inquiries directly through the website.
+- **Dynamic Content**: Powered by Node.js and EJS templates for dynamic rendering of pages.
+- **Optimized Sitemap**: Includes an automatically generated sitemap for SEO.
 
 ## Technologies Used
 
-- HTML5
-- CSS3
-- JavaScript
-- MySQL
+- **Node.js**: Server-side runtime environment.
+- **Express.js**: Web framework for Node.js.
+- **EJS**: Template engine for rendering HTML.
+- **CSS**: Styling for responsiveness and layout.
+- **Nodemailer**: For handling email functionality.
 
-## Contact Us
+## Installation and Deployment
 
-For more information or to get a quote, visit our [website](https://www.empstateweb.com/) or contact us directly.
+### Prerequisites
+- Node.js (v16 or higher)
+- npm (Node Package Manager)
 
-## How to Start the Project
-
-- npm install
-- npm start
+### Steps
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/ioborin22/nceinc.getwabinc.com.git
