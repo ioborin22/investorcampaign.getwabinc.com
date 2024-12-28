@@ -19,7 +19,7 @@ jobs:
           username: 'root'
           password: ${{ secrets.SERVER_PASSWORD }}
           source: "."
-          target: "/home/userwww/web/nceinc.getwabinc.com/public_html"
+          target: "/home/userwww/web/sierracyber.getwabinc.com/public_html"
           strip_components: 1
           excludes: |
             .git/**
@@ -46,13 +46,13 @@ jobs:
             echo "Using pm2: $(which pm2)"
 
             # Переходим в папку проекта
-            cd /home/userwww/web/nceinc.getwabinc.com/public_html
+            cd /home/userwww/web/sierracyber.getwabinc.com/public_html
 
             # Устанавливаем права
-            chown -R www-data:www-data /home/userwww/web/nceinc.getwabinc.com/public_html
-            chmod -R 775 /home/userwww/web/nceinc.getwabinc.com/public_html
+            chown -R www-data:www-data /home/userwww/web/sierracyber.getwabinc.com/public_html
+            chmod -R 775 /home/userwww/web/sierracyber.getwabinc.com/public_html
 
             # Устанавливаем зависимости и запускаем PM2
             npm install
-            pm2 start index.js --name "nceinc" --watch || pm2 restart nceinc
+            pm2 start index.js --name "sierracyber" --watch || pm2 restart sierracyber
             pm2 save

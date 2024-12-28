@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
 
 const app = express();
-const port = 3001;
+const port = 3002;
 
 // Set EJS as the template engine
 app.set('view engine', 'ejs');
@@ -21,24 +21,36 @@ app.get('/', (req, res) => {
   res.render('index');
 });
 
-app.get('/aboutus.html', (req, res) => {
-  res.render('aboutus');
+app.get('/govPrtnr.htm', (req, res) => {
+  res.render('govPrtnr');
 });
 
-app.get('/resources.html', (req, res) => {
-  res.render('resources');
+app.get('/profile.htm', (req, res) => {
+  res.render('profile');
 });
 
-app.get('/expertise.html', (req, res) => {
-  res.render('expertise');
+app.get('/Staff.htm', (req, res) => {
+  res.render('Staff');
 });
 
-app.get('/clients.html', (req, res) => {
-  res.render('clients');
+app.get('/Engineering.htm', (req, res) => {
+  res.render('Engineering');
 });
 
-app.get('/form.html', (req, res) => {
-  res.render('form');
+app.get('/contracts.htm', (req, res) => {
+  res.render('contracts');
+});
+
+app.get('/SeaPorte.htm', (req, res) => {
+  res.render('SeaPorte');
+});
+
+app.get('/employment.htm', (req, res) => {
+  res.render('employment');
+});
+
+app.get('/Contact.htm', (req, res) => {
+  res.render('Contact');
 });
 
 // Add a POST route to handle form submissions

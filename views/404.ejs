@@ -11,68 +11,71 @@
     <meta property="og:url" content="/404.html"/>
     <meta name="twitter:title" content="404 - Page Not Found"/>
     <meta name="twitter:description" content="Sorry, the page you are looking for does not exist."/>
-  </head>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
 
-    <body>
-    <div class="page">
-      <button class="menu-toggle">☰ Menu</button>
-      <div class="sidebar">
-        <div class="menu">
-          <button
-            class="menu-button"
-            onclick="window.location.href='aboutus.html';"
-          >
-            Staff
-          </button>
-          <button
-            class="menu-button"
-            onclick="window.location.href='resources.html';"
-          >
-            Resources
-          </button>
-          <button
-            class="menu-button"
-            onclick="window.location.href='expertise.html';"
-          >
-            Expertise
-          </button>
-          <button
-            class="menu-button"
-            onclick="window.location.href='clients.html';"
-          >
-            Clients
-          </button>
-          <button
-            class="menu-button"
-            onclick="window.location.href='form.html';"
-          >
-            Ask Us
-          </button>
+<body>
+    <div id="central">
+        <div class="responsive-bar">
+            <span class="full-info">
+                <strong>Sierra Cybernetics Inc.</strong>, 5140 E La Palma Ave, Anaheim, CA 92807, Established in 1981, Phone:
+                <a href="tel:+17149211212" class="phone-link"> (714) 921-1212</a>
+            </span>
+            <span class="short-info">
+                <strong>Sierra Cybernetics Inc.</strong>, Established in 1981, Phone:
+                <a href="tel:+17149211212" class="phone-link"> (714) 921-1212</a>
+            </span>
+            <span class="minimal-info">
+                <span class="established">Established in 1981</span>
+                <span class="phone">
+                    Phone: <a href="tel:+17149211212" class="phone-link">(714) 921-1212</a>
+                </span>
+            </span>
         </div>
-      </div>
-      <div class="content">
-        <header>
-          <a href="/">
-            <img
-              class="header-logo"
-              src="assets/images/NCE_Logo.gif"
-              alt="NovaComp Engineering, Inc."
-            />
-          </a>
-          <h1 class="title">404 - Page Not Found</h1>
-        </header>
-        
-                    <p class="text">Sorry, the page you are looking for does not exist. It might have been moved or deleted.</p>
-                    <p class="text">Please check the URL and try again, or use the button below to go back to our homepage.</p>
-                    <button onclick="window.location.href='/'" class="project_link yellow" style="cursor: pointer;">Back to Home</button>
-      </div>
+
+        <div id="header">
+            <div class="header-content">
+                <div class="company-info">
+                    <p><strong>Sierra Cybernetics Inc.</strong></p>
+                    <p>5140 E La Palma Ave, Anaheim, CA 92807</p>
+                    <p>
+                        <strong>Phone:</strong>
+                        <a href="tel:+17149211212" class="phone-link">(714) 921-1212</a>
+                    </p>
+                    <p><strong>Established in 1981.</strong></p>
+                </div>
+            </div>
+        </div>
+
+        <div id="rightside">
+            <header class="not-found-header">
+                <h1 class="title">404 - Page Not Found</h1>
+            </header>
+            <p class="text">
+                Sorry, the page you are looking for does not exist. It might have been moved or deleted.
+            </p>
+            <p class="text">
+                Please check the URL and try again, or use the button below to go back to our homepage.
+            </p>
+            <button onclick="window.location.href='/'" class="project_link yellow" style="cursor: pointer;">Back to Home</button>
+        </div>
+
+        <footer id="footer">
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href=".">Home</a></li>
+                    <li><a href="govPrtnr.htm">Overview</a></li>
+                    <li><a href="profile.htm">Profile</a></li>
+                    <li><a href="Contact.htm">Contact Us</a></li>
+                </ul>
+            </nav>
+        </footer>
     </div>
+
     <script>
-      document
-        .querySelector('.menu-toggle')
-        .addEventListener('click', function () {
-          document.querySelector('.sidebar').classList.toggle('show');
+        document.querySelector('.menu-toggle').addEventListener('click', function () {
+            document.querySelector('.sidebar').classList.toggle('show');
         });
     </script>
-  </body>
+</body>
 </html>

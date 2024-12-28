@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="robots" content="noindex" />
+    <%- include('partials/meta') %>
+    <link rel="canonical" href="/Employment.htm" />
+    <title>Employment Opportunities - Sierra Cybernetics</title>
+    <meta name="author" content="Sierra Cybernetics" />
+    <meta
+      name="description"
+      content="Explore employment opportunities at Sierra Cybernetics and learn about application requirements."
+    />
+    <meta property="og:title" content="Employment Opportunities - Sierra Cybernetics" />
+    <meta
+      property="og:description"
+      content="Explore employment opportunities at Sierra Cybernetics and learn about application requirements."
+    />
+    <style>
+      .content-section {
+        padding: 20px;
+        font-size: 14px;
+        line-height: 1.8;
+      }
+
+      .content-section h1 {
+        color: #00306f;
+        font-size: 24px;
+        margin-bottom: 15px;
+      }
+
+      .content-section hr {
+        margin: 20px 0;
+        border: none;
+        border-top: 2px solid #ccc;
+      }
+
+      .content-section ul {
+        margin-left: 20px;
+        list-style-type: disc;
+      }
+
+      .content-section a {
+        color: #00306f;
+        text-decoration: none;
+      }
+
+      .content-section a:hover {
+        text-decoration: underline;
+      }
+
+      @media (max-width: 768px) {
+        .content-section {
+          font-size: 16px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="central">
+      <%- include('partials/header') %>
+
+      <div id="rightside">
+        <h1>Employment Opportunities</h1>
+        <div class="content-section">
+          <p>There are no positions available at this time.</p>
+          <p>
+            Sierra regularly advertises open IT positions on employment websites such as
+            <a href="https://www.craigslist.org" target="_blank">Craigslist</a> or
+            <a href="https://www.monster.com" target="_blank">Monster</a>, or
+            Industry-specific job boards.
+          </p>
+          <hr />
+          <h4>Please email or mail responses to:</h4>
+          <p>
+            HR, Sierra Cybernetics, Inc.<br />
+            5140 E. La Palma Avenue, Suite 201<br />
+            Anaheim Hills, CA 92807<br />
+            <a href="mailto:hr@sierracyber.com">hr@sierracyber.com</a>
+          </p>
+          <hr />
+          <ul>
+            <li>Must be legally authorized to work in the U.S. without sponsorship.</li>
+            <li>Sierra Cybernetics is not accepting resumes from Employment Agencies/Recruiters or Third Party Entities.</li>
+            <li>Sierra Cybernetics will only consider resumes from Direct to Contract/Hire candidates.</li>
+          </ul>
+        </div>
+      </div>
+
+      <%- include('partials/footer') %>
+    </div>
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>
