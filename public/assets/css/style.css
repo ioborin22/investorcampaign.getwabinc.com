@@ -26,7 +26,7 @@ body {
 }
 
 #header {
-  background: url('https://sierracyber.getwabinc.com/images/header.jpg') no-repeat right;
+  background: url('https://sierracyber.getwabinc.com/assets/images/header.jpg') no-repeat right;
   height: 226px;
   background-size: contain;
   background-color: #00306f;
@@ -230,7 +230,7 @@ table td {
 
 footer {
   margin-top: auto;
-  background: url('https://sierracyber.getwabinc.com/images/footer.gif') no-repeat right;
+  background: url('https://sierracyber.getwabinc.com/assets/images/footer.gif') no-repeat right;
   background-size: contain;
   color: #ffffff;
   font-size: 12px;
@@ -282,7 +282,7 @@ footer p {
   }
 
   #header {
-    background: url('https://sierracyber.getwabinc.com/images/header.jpg') no-repeat center,
+    background: url('https://sierracyber.getwabinc.com/assets/images/header.jpg') no-repeat center,
       linear-gradient(to bottom, #00306f 50%, rgb(2, 5, 16) 50%);
     background-size: contain, cover;
   }
