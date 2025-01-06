@@ -1623,6 +1623,9 @@ strong {
   .card {
     margin-bottom: 200px;
   }
+  .pricing-cards .card:nth-child(1) {
+    margin-bottom: 200px;
+  }
 }
 
 @media (min-width: 900px) {
