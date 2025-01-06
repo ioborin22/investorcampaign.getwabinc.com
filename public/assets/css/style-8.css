@@ -1523,6 +1523,9 @@ strong {
 }
 
 @media (max-width: 768px) {
+  
+
+
   .hero .text,
   .hero img {
     max-width: 100%;
@@ -1620,10 +1623,7 @@ strong {
     font-size: 0.9rem;
   }
   /* end purchase */
-  .card {
-    margin-bottom: 200px;
-  }
-  .pricing-cards .card:nth-child(1) {
+.pricing-cards .card:nth-child(1) {
     margin-bottom: 200px;
   }
 }
