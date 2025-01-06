@@ -1620,6 +1620,10 @@ strong {
   .card {
     margin-bottom: 200px;
   }
+  .scroll-to-top {
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 
 @media (min-width: 900px) {
