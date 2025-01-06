@@ -21,37 +21,14 @@ app.get('/', (req, res) => {
   res.render('index');
 });
 
-app.get('/govPrtnr.htm', (req, res) => {
-  res.render('govPrtnr');
+app.get('/privacy-policy', (req, res) => {
+  res.render('privacy-policy');
 });
 
-app.get('/profile.htm', (req, res) => {
-  res.render('profile');
+app.get('/terms-and-conditions', (req, res) => {
+  res.render('terms-and-conditions');
 });
 
-app.get('/Staff.htm', (req, res) => {
-  res.render('Staff');
-});
-
-app.get('/Engineering.htm', (req, res) => {
-  res.render('Engineering');
-});
-
-app.get('/contracts.htm', (req, res) => {
-  res.render('contracts');
-});
-
-app.get('/SeaPorte.htm', (req, res) => {
-  res.render('SeaPorte');
-});
-
-app.get('/employment.htm', (req, res) => {
-  res.render('employment');
-});
-
-app.get('/Contact.htm', (req, res) => {
-  res.render('Contact');
-});
 
 // Add a POST route to handle form submissions
 app.post('/submit-form', async (req, res) => {

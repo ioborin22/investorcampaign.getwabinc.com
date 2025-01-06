@@ -1,118 +1,1072 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta name="robots" content="noindex" />
     <%- include('partials/meta') %>
-    <link rel="canonical" href="/" />
-    <title>Sierra Cybernetics - Trusted Partner for 35+ Years</title>
-    <meta name="author" content="Sierra Cybernetics" />
-    <meta
-      name="description"
-      content="Providing Software Engineering, C4I Systems, Document Imaging, and Systems Integration for Government and Private Industry."
-    />
-    <meta
-      name="keywords"
-      content="Sierra Cybernetics, Software Engineering, C4I Systems, Document Imaging, Systems Integration, Workflow"
-    />
-    <meta property="og:type" content="website" />
-    <meta
-      property="og:title"
-      content="Sierra Cybernetics - Trusted Partner for 35+ Years"
-    />
-    <meta
-      property="og:description"
-      content="Providing Software Engineering, C4I Systems, Document Imaging, and Systems Integration for Government and Private Industry."
-    />
-    <meta property="og:url" content="/" />
-    <meta property="og:site_name" content="Sierra Cybernetics" />
-    <meta
-      property="og:image"
-      content="assets/images/header/sierra_primary.webp"
-    />
-    <meta property="og:locale" content="en_US" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:domain" content="/" />
-    <meta
-      name="twitter:title"
-      content="Sierra Cybernetics - Trusted Partner for 35+ Years"
-    />
-    <meta
-      name="twitter:description"
-      content="Providing Software Engineering, C4I Systems, Document Imaging, and Systems Integration for Government and Private Industry."
-    />
-    <meta name="twitter:image" content="assets/images/sierra_primary.webp" />
+    <link rel="canonical" href="https://investorcampaign.com/" />
+    <title>Grow Your Business | Connect with Investors Effortlessly</title>
   </head>
+
   <body>
-    <div id="central">
-      
+    <button id="scrollToTop" class="scroll-to-top">↑</button>
+<!-- Purchase Plan Modal -->
 
-      <%- include('partials/header') %>
+<!-- Green Purchase -->
+<div id="professionalPlanModal" class="purchase-modal" style="display: none;">
+  <div class="purchase-modal-content">
+    <button class="purchase-close-modal">&times;</button>
+    <h2 class="purchase-modal-title">Professional Plan | $297 / Month</h2>
+    <div class="credit-card-green">
+      <div class="card-chip"></div>
+      <input
+        type="text"
+        class="card-number-input"
+        maxlength="19"
+        placeholder="#### #### #### ####"
+        oninput="formatCardNumber(this)"
+      />
+      <input
+        type="text"
+        class="card-holder-input"
+        placeholder="CARD HOLDER NAME"
+        oninput="updateCardHolder(this)"
+      />
+      <div class="expiry-cvv">
+        <input
+          type="text"
+          class="card-expiry-input"
+          maxlength="5"
+          placeholder="MM/YY"
+          oninput="formatExpiryDate(this)"
+        />
+        <input
+          type="text"
+          class="card-cvv-input"
+          maxlength="3"
+          placeholder="CVV"
+        />
+      </div>
+    </div>
+    <button id="professionalPurchaseButton" class="purchase-submit-button">Confirm Purchase</button>
+  </div>
+</div>
 
-      <div id="rightside">
-        <h1>Sierra Cybernetics News</h1>
-        <p>
-          This year, Sierra has been awarded new contracts from the following
-          agencies:
-        </p>
-        <ul>
-          <li>South Coast Air Quality Management District (SCAQMD)</li>
-          <li>California Public Employees Retirement System (CaLPERS)</li>
-          <li>
-            Los Angeles County Metropolitan Transportation Authority (Metro)
-          </li>
-          <li>Los Angeles Unified School District (LAUSD)</li>
-          <li>Metropolitan Water District of Southern California (MWD)</li>
-          <li>Orange County Superior Court</li>
-          <li>Port of Los Angeles (POLA)</li>
-        </ul>
-        <h3>
-          <a href="Contracts.htm"
-            >See Our Contracts Page for Details of These Plus Our Other Existing
-            Contracts</a
+<!-- Orange Purchase -->
+<div id="powerPlanModal" class="purchase-modal" style="display: none;">
+  <div class="purchase-modal-content">
+    <button class="purchase-close-modal">&times;</button>
+    <h2 class="purchase-modal-title" style="color: #f3672a;">Power Plan | $497 / Month</h2>
+    <div class="credit-card-orange">
+      <div class="card-chip"></div>
+      <input
+        type="text"
+        class="card-number-input"
+        maxlength="19"
+        placeholder="#### #### #### ####"
+        oninput="formatCardNumber(this)"
+      />
+      <input
+        type="text"
+        class="card-holder-input"
+        placeholder="CARD HOLDER NAME"
+        oninput="updateCardHolder(this)"
+      />
+      <div class="expiry-cvv">
+        <input
+          type="text"
+          class="card-expiry-input"
+          maxlength="5"
+          placeholder="MM/YY"
+          oninput="formatExpiryDate(this)"
+        />
+        <input
+          type="text"
+          class="card-cvv-input"
+          maxlength="3"
+          placeholder="CVV"
+        />
+      </div>
+    </div>
+    <button id="powerPurchaseButton" class="purchase-submit-button" style="background: linear-gradient(90deg, #f3672a, #e64a19);">
+  Confirm Purchase
+</button>
+  </div>
+</div>
+<!-- END Purchase Plan Modal -->
+    <!-- Modal Watch Demo Video-->
+    <div class="modal-demo" id="watchDemoModal">
+      <div class="modal-demo-content-video" style="text-align: center">
+        <span class="demo-close-button-video" id="closeWatchDemoModal"
+          >&times;</span
+        >
+        <h2>Here you can see the product demo video</h2>
+        <!-- Responsive video container -->
+        <div
+          class="video-container"
+          style="
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            max-width: 800px;
+            width: 100%;
+            margin: 0 auto;
+          "
+        >
+          <iframe
+            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            style="
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+            "
           >
-        </h3>
-        <h3>
-          <a href="govPrtnr.htm">A Trusted Government Partner for 35+ Years</a>
-        </h3>
-        <div class="mission-section">
-          <h2>SIERRA'S MISSION</h2>
-          <p>
-            <strong
-              >Provide Quality Information Technology Services and Innovative
-              Software Products for Information Management Applications.</strong
-            >
-          </p>
-          <p>
-            <strong
-              >IN THE PURSUIT OF THIS MISSION, WE WILL ADHERE TO THE FOLLOWING
-              PRINCIPLES:</strong
-            >
-          </p>
-          <ul>
+          </iframe>
+        </div>
+        <button class="highlight-button jump" id="openModalClub">
+          Join the Club Now!
+          <span class="button-subtext"
+            >Take your business to the next level</span
+          >
+        </button>
+      </div>
+    </div>
+    <!-- END Modal Watch Demo Video -->
+    <!-- Modal Demo -->
+    <div class="modal-demo" id="demoModal">
+      <div class="modal-demo-content">
+        <span class="demo-close-button" id="closeDemoModal">&times;</span>
+        <h2>Schedule a Demo</h2>
+        <form id="demoForm">
+          <label for="demo-name">Your Name:</label>
+          <input
+            type="text"
+            id="demo-name"
+            name="name"
+            placeholder="Enter your name"
+            required
+          />
+
+          <label for="demo-email">Your Email:</label>
+          <input
+            type="email"
+            id="demo-email"
+            name="email"
+            placeholder="Enter your email"
+            required
+          />
+
+          <label for="demo-phone">Your Phone Number:</label>
+          <input
+            type="tel"
+            id="demo-phone"
+            name="phone"
+            placeholder="Enter your phone number"
+          />
+
+          <label for="demo-message">Message:</label>
+          <textarea
+            id="demo-message"
+            name="message"
+            placeholder="Enter your message"
+          ></textarea>
+
+          <button type="submit" class="demo-submit-button">Submit</button>
+        </form>
+      </div>
+    </div>
+    <!-- End Modal Demo -->
+    <!-- Modal Price -->
+    <div class="modal" id="modal">
+      <div class="modal-content">
+        <button class="close-modal" id="closeModal">&times;</button>
+        <div class="tabs">
+          <button class="tab active" data-tab="tab1">PROFESSIONAL</button>
+          <button class="tab" data-tab="tab2">POWER</button>
+        </div>
+        <div class="tab-content active" id="tab1">
+          <div class="square">
+            <h2 class="h2">$297</h2>
+            <p>Per Month</p>
+            <strong>Includes all Basic features</strong>
+            <button class="choose-plan-button" id="professionalPlanButtonModal">CHOOSE PLAN</button>
+          </div>
+
+          <ul class="features-list">
+            <li><span class="checkmark">✔</span> Unlimited Contacts</li>
+            <li><span class="checkmark">✔</span> Unlimited Users</li>
+            <li><span class="checkmark">✔</span> Import Leads/Contacts</li>
+            <li><span class="checkmark">✔</span> Booking Calendar/Scheduler</li>
+            <li><span class="checkmark">✔</span> CRM to Manage Contacts</li>
             <li>
-              <strong>WE WILL BE CUSTOMER-ORIENTED -</strong>
-              Customer satisfaction is our highest priority. We will emphasize
-              quality in all activities. We will recognize that service is the
-              foundation of a successful business. We will strive to achieve
-              on-time, within-cost deliveries.
+              <span class="checkmark">✔</span> Pipeline for Sales Tracking
             </li>
+            <li><span class="checkmark">✔</span> Email Marketing</li>
+            <li><span class="checkmark">✔</span> Trade Show Lead Capture</li>
             <li>
-              <strong>WE WILL FOSTER EMPLOYEE GROWTH -</strong>
-              We will encourage a participatory work environment emphasizing
-              open, honest communications. We will provide the professional,
-              economic, and educational improvement opportunities necessary for
-              a stable superior workforce.
+              <span class="checkmark">✔</span> Lead Reactivation Campaigns
             </li>
+            <li><span class="checkmark">✔</span> Facebook Ad Reporting</li>
+            <li><span class="checkmark">✔</span> Google Ad Reporting</li>
+          </ul>
+        </div>
+        <div class="tab-content" id="tab2">
+          <div class="square">
+            <h2 class="h2">$497</h2>
+            <p>Per Month</p>
+            <strong>Includes all Professional +</strong>
+            <button class="choose-plan-button" id="powerPlanButtonModal">CHOOSE PLAN</button>
+          </div>
+
+          <ul class="features-list">
+            <li><span class="checkmark">✔</span> Landing Page Builder</li>
+            <li><span class="checkmark">✔</span> Collect Leads with Forms</li>
+            <li><span class="checkmark">✔</span> Custom Fields on Contacts</li>
             <li>
-              <strong>WE WILL MAINTAIN CORPORATE INTEGRITY -</strong>
-              We will abide by and support the legal and highest ethical
-              standards of our profession.
+              <span class="checkmark">✔</span> Surveys for Lead Generation
             </li>
+            <li><span class="checkmark">✔</span> Marketing Automation</li>
+            <li><span class="checkmark">✔</span> Email Marketing</li>
+            <li><span class="checkmark">✔</span> Lead Nurture Campaigns</li>
+            <li><span class="checkmark">✔</span> Sales Agent Reporting</li>
+            <li><span class="checkmark">✔</span> SMS & Email Templates</li>
+            <li><span class="checkmark">✔</span> Workflow Builder</li>
+            <li><span class="checkmark">✔</span> LMS for Training</li>
           </ul>
         </div>
       </div>
-      <%- include('partials/footer') %>
     </div>
-    <script src="assets/js/app.js"></script>
+    <!-- end modal -->
+    <!-- container -->
+    <div class="container">
+      <header class="header">
+        <div class="logo">
+          <a href="/">
+            <img src="/assets/images/logo-3.png" alt="Logo" />
+          </a>
+        </div>
+        <nav>
+          <a href="/">Home</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#funnel-section">Marketing Funnel</a>
+          <a href="#why-choose-us">Why Choose Us</a>
+          <a href="#faq">FAQ</a>
+        </nav>
+        <button id="descDemoStart" class="cta-button">Schedule a Demo</button>
+        <div class="burger-menu" id="burgerMenu">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </header>
+
+      <section class="hero">
+        <div class="text">
+          <h4>THE IDEAL SOLUTION TO MANAGE INVESTORS AND INVESTOR LEADS</h4>
+          <h1>Win More Investors</h1>
+          <p>
+            Capture, nurture, and convert leads into
+            <span style="font-weight: bold; color: #264c89"
+              >investment opportunities</span
+            >.
+          </p>
+          <p>
+            <strong style="color: #f3672a"
+              >Skyrocket Your Capital Raise With ICM CRM:</strong
+            >
+            The leading CRM solution designed to help companies expand their
+            investor base efficiently.
+          </p>
+          <div class="buttons">
+            <button class="button button-orange" id="openModal">
+              View Pricing
+            </button>
+            <button class="button button-blue">Watch Demo</button>
+          </div>
+        </div>
+        <img src="/assets/images/Group-6.png" alt="CRM Dashboard" />
+      </section>
+
+      <div class="mobile-menu" id="mobileMenu">
+        <span class="close" id="closeMenu">&times;</span>
+        <div class="logo">
+          <a href="/">
+            <img src="/assets/images/logo-3.png" alt="Logo" />
+          </a>
+        </div>
+        <nav>
+          <a href="#pricing">Pricing</a>
+          <a href="#funnel-section">Marketing Funnel</a>
+          <a href="#why-choose-us">Why Choose Us</a>
+          <a href="#faq">FAQ</a>
+          <button id="mobileDemoStart" class="cta-button">
+            Schedule a Demo
+          </button>
+        </nav>
+      </div>
+    </div>
+    <!-- end container -->
+    <!-- video -->
+    <section class="video-stats">
+      <div class="container">
+        <div class="content">
+          <div class="video-wrapper">
+            <div class="responsive-video">
+              <iframe
+                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+          <div class="text-wrapper">
+            <h3>
+              Perfect management tool for Crowdfunding Campaigns including Reg D
+              A+ and CF
+            </h3>
+            <p>
+              The first step is attracting great leads. That’s the easy part.
+              The key is what you do after you get the lead. That’s an easier
+              part …. but only if you use the ICM CRM.
+            </p>
+            <p>The only lead management tool you will ever need.</p>
+          </div>
+        </div>
+
+        <!-- stats -->
+        <div class="stats">
+          <div class="stat-item">
+            <span
+              class="number"
+              data-target="2.5"
+              data-unit="billion"
+              data-currency="true"
+              data-speed="slow"
+              >0</span
+            >
+            <p>Equity Crowdfunding</p>
+          </div>
+          <div class="stat-item">
+            <span
+              class="number"
+              data-target="275000"
+              data-currency="true"
+              data-speed="fast"
+              >0</span
+            >
+            <p>Average Raised 2020 (successful companies) Reg CF</p>
+          </div>
+          <div class="stat-item">
+            <span class="number" data-target="358000" data-speed="fast">0</span>
+            <p>Investors 2020 Reg CF</p>
+          </div>
+          <div class="stat-item">
+            <span
+              class="number"
+              data-target="0.5"
+              data-unit="Million"
+              data-speed="slow"
+              >0</span
+            >
+            <p>Conversions</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end video -->
+
+    <!-- highlight-box -->
+    <section class="highlight-box">
+      <div class="content">
+        <h2>One Tool Total Management</h2>
+        <p id="pricing">
+          All-in-One tool that will save you time and make you money. Will cover
+          the cost several times over.
+        </p>
+      </div>
+    </section>
+    <!-- end highlight-box -->
+    <!-- pricing -->
+    <section class="pricing-section">
+      <div class="pricing-cards">
+        <div class="card">
+          <h3 class="card-title">PROFESSIONAL</h3>
+          <h2 class="price">$297</h2>
+          <p>Per Month</p>
+          <strong>Includes all Basic features</strong>
+          <button class="choose-plan-button" id="professionalPlanButton">CHOOSE PLAN</button>
+
+          <ul class="features-list">
+            <li><span class="checkmark">✔</span> Unlimited Contacts</li>
+            <li><span class="checkmark">✔</span> Unlimited Users</li>
+            <li><span class="checkmark">✔</span> Import Leads/Contacts</li>
+            <li><span class="checkmark">✔</span> Booking Calendar/Scheduler</li>
+            <li><span class="checkmark">✔</span> CRM to Manage Contacts</li>
+            <li>
+              <span class="checkmark">✔</span> Pipeline for Sales Tracking
+            </li>
+            <li><span class="checkmark">✔</span> Email Marketing</li>
+            <li><span class="checkmark">✔</span> Trade Show Lead Capture</li>
+            <li>
+              <span class="checkmark">✔</span> Lead Reactivation Campaigns
+            </li>
+            <li><span class="checkmark">✔</span> Facebook Ad Reporting</li>
+            <li><span class="checkmark">✔</span> Google Ad Reporting</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3 class="card-title">POWER</h3>
+          <h2 class="price">$497</h2>
+          <p>Per Month</p>
+          <strong>Includes all Professional +</strong>
+          <button class="choose-plan-button" id="powerPlanButton">CHOOSE PLAN</button>
+          <ul class="features-list">
+            <li><span class="checkmark">✔</span> Landing Page Builder</li>
+            <li><span class="checkmark">✔</span> Collect Leads with Forms</li>
+            <li><span class="checkmark">✔</span> Custom Fields on Contacts</li>
+            <li>
+              <span class="checkmark">✔</span> Surveys for Lead Generation
+            </li>
+            <li><span class="checkmark">✔</span> Marketing Automation</li>
+            <li><span class="checkmark">✔</span> Email Marketing</li>
+            <li><span class="checkmark">✔</span> Lead Nurture Campaigns</li>
+            <li><span class="checkmark">✔</span> Sales Agent Reporting</li>
+            <li><span class="checkmark">✔</span> SMS & Email Templates</li>
+            <li><span class="checkmark">✔</span> Workflow Builder</li>
+            <li><span class="checkmark">✔</span> LMS for Training</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!-- end pricing -->
+
+    <!-- highlight -->
+    <section class="highlight-box">
+      <div class="content">
+        <h2>
+          Our campaigns convert traffic to investors. It's worked and is
+          time-tested
+        </h2>
+        <p>
+          Skyrocket your campaign with ICM CRM<br />
+          The Leading CRM in the market for companies searching for investors.
+        </p>
+        <p>
+          Capture, nurture & convert leads into investments with ICM CRM
+          <strong>“No 1 CRM in the Market"</strong>
+        </p>
+        <button class="highlight-button jump" id="openModalClub2">
+          Join the Club Now!
+          <span class="button-subtext"
+            >Take your business to the next level</span
+          >
+        </button>
+        <p class="highlight-cancel">
+          Cancel your subscription anytime. No questions asked.
+        </p>
+      </div>
+    </section>
+    <!-- end highlight -->
+
+    <!-- info -->
+    <section class="info-section">
+      <div class="info-container">
+        <div class="info-image">
+          <img src="assets/images/Group-9011.png" alt="Marketing Dashboard" />
+        </div>
+        <div class="info-content">
+          <div class="info-item">
+            <h3>Do you want to attract more investors?</h3>
+            <p>
+              Never spend a penny on useless marketing tactics that are never
+              going to work. Learn & implement the best digital marketing
+              techniques shared by our members to get more investors.
+            </p>
+          </div>
+          <div class="info-item">
+            <h3>Do you want to retain your investors for a longer time?</h3>
+            <p>
+              With better marketing tools at your disposal, you will be in the
+              right position to analyze the data & make an informed decision
+              about your investors.
+            </p>
+          </div>
+          <div class="info-item">
+            <h3>
+              How much more crowdfunding campaign owners raise if they update
+              their supporters every 5 days?
+            </h3>
+            <p>
+              Never miss an important message from your investor. Respond
+              immediately & effortlessly to the queries of your investors with
+              ICM CRM’s flexible marketing dashboard. The ICM CRM allows you to
+              send customized emails, SMS & even phone calls all from one
+              dashboard.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end info -->
+    <!-- funnel -->
+    <section class="funnel-section">
+      <div class="funnel-container">
+        <div id="funnel-section" class="funnel-text">
+          <h2>
+            Bringing together the leads into the only tool you will ever need.
+          </h2>
+          <p>
+            All-in-one marketing solution, that is the only tool you will ever
+            need. You can still keep your favorite apps and use them seamlessly
+            with ICMcrm. Once the leads are in the system is when the magic
+            begins.
+          </p>
+          <div class="funnel-item">
+            <img src="assets/images/Group-9206.png" alt="Capture Icon" />
+            <div>
+              <h3>Capture</h3>
+              <p>
+                With our interactive forms & dynamic landing pages capturing
+                leads are seamless.
+              </p>
+            </div>
+          </div>
+          <div class="funnel-item">
+            <img src="assets/images/Group-9204-1.png" alt="Nurture Icon" />
+            <div>
+              <h3>Nurture</h3>
+              <p>
+                With ICMCRM companies can automate the repetitive tasks that
+                consume a lot of their time & resources. Leave the operation
+                part to us & focus on what you do best. With ICMCRM, you email,
+                text and call your investors directly & all the records remain
+                at one place.
+              </p>
+            </div>
+          </div>
+          <div class="funnel-item">
+            <img src="assets/images/Group-9205-1.png" alt="Convert Icon" />
+            <div>
+              <h3>Convert</h3>
+              <p>
+                Schedule, Monitor & Follow up with your investors from the
+                ICMCRM dashboard. It’s simple, fast & result-oriented.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="funnel-image">
+          <img src="assets/images/Group-51.png" alt="Marketing Funnel" />
+        </div>
+      </div>
+    </section>
+    <!-- end funnel -->
+
+    <!-- highlight -->
+    <section class="highlight-box" style="background-color: white; padding: 0">
+      <div class="content">
+        <button class="highlight-button jump" id="openModalClub3">
+          Join the Club Now!
+          <span class="button-subtext"
+            >Take your business to the next level</span
+          >
+        </button>
+        <p class="highlight-cancel">
+          Cancel your subscription anytime. No questions asked.
+        </p>
+      </div>
+    </section>
+    <!-- end highlight -->
+
+    <!-- investor-leads -->
+    <section class="investor-leads-section">
+      <div class="investor-leads-header">
+        <h2>Capture New Investor Leads Through ICM CRM</h2>
+        <p class="subtext">
+          Get all the training and resources you need to start or grow your
+          business.
+        </p>
+      </div>
+      <div class="investor-leads-container">
+        <div class="investor-leads-content">
+          <div class="investor-leads-item">
+            <h3>Create Responsive Landing Page</h3>
+            <p>
+              Create responsive, aesthetically pleasing & highly converting
+              landing pages with simple drag & drop from our investor campaign
+              page builder. The landing pages created are optimised for google’s
+              core web vitals. Get started with pre-built investor landing page
+              templates if you are running out of time.
+            </p>
+          </div>
+          <hr />
+          <div class="investor-leads-item">
+            <h3>Build Interactive Forms</h3>
+            <p>
+              Building lead capturing form no longer requires complex coding.
+              With ICMCRM, you can set up awesome forms within minutes. Select
+              your fields, configure your options & integrate with your website
+              & you are done.
+            </p>
+          </div>
+          <hr />
+          <div class="investor-leads-item">
+            <h3>Schedule Appointments</h3>
+            <p>
+              With the Investor Campaign calendar, you can set appointments;
+              reschedule or get notified in case the investor postpones a
+              meeting. Set triggers & create mini-campaigns for no-show
+              appointments and reminders!
+            </p>
+          </div>
+          <hr />
+          <div class="investor-leads-item">
+            <h3>Convert Leads into Investments</h3>
+            <p>
+              From marketing to sales, we have covered your needs through the
+              diversified tools offered in ICMCRM. Now you don’t have to worry
+              about missing an important call from an investor or sending an
+              important reminder email; All can be managed from the ICMCRM
+              dashboard. Isn’t that super easy?
+            </p>
+          </div>
+        </div>
+        <div class="investor-leads-image">
+          <img src="assets/images/1.png" alt="ICM CRM Dashboard" />
+        </div>
+      </div>
+    </section>
+    <!-- end investor-leads -->
+
+    <!-- info2 -->
+    <section class="info-section">
+      <div class="info-container">
+        <div class="info-image">
+          <img src="assets/images/Mask-Group-2.png" alt="Marketing Dashboard" />
+        </div>
+        <div class="info-content">
+          <div class="info-item">
+            <h3>Create Multi-Channel Campaign</h3>
+            <p>
+              Respond to your leads instantaneously & never keep them waiting.
+              With ICMCRM send automated SMS’s, pre-recorded voice notes or
+              schedule an email for a potential lead.
+            </p>
+          </div>
+          <div class="info-item">
+            <h3>Follow Up</h3>
+            <p>
+              Create automated follow-ups via ICMCRM for any lead, prospect from
+              the central dashboard. Monitor & measure the progress of the
+              prospect & send new communications using our customised email
+              templates as & when needed.
+            </p>
+          </div>
+          <div class="info-item">
+            <h3>Two-way Communication</h3>
+            <p>
+              Remain connected with your leads 24*7 & never go offline with our
+              mobile version. The ICMCRM works perfectly fine on desktop as well
+              as mobile.
+            </p>
+          </div>
+          <div class="info-item">
+            <h3>
+              Convert More Prospects into Leads into Prospects & Prospects
+            </h3>
+            <p>
+              Qualify Your Leads. All leads are not created equal. Identify Your
+              Best Lead. Nurture. Close. Automatic. Shazam.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end info2 -->
+
+    <!-- funnel2 -->
+    <section class="funnel-section">
+      <div class="funnel-container">
+        <div class="funnel-text">
+          <div class="funnel-item">
+            <div>
+              <h3>Organise your Pipeline & Workflow</h3>
+              <p>
+                Now manage, track & communicate with all the incoming leads with
+                one powerful dashboard.
+              </p>
+            </div>
+          </div>
+          <div class="funnel-item">
+            <div>
+              <h3>Automate Repetitive Tasks</h3>
+              <p>
+                Make it easy for your investors to approach you. Remove
+                bottlenecks, streamline the process & make it easy for them to
+                book an appointment.
+              </p>
+            </div>
+          </div>
+          <div class="funnel-item">
+            <div>
+              <h3>Receive Analytics Reports at One Place</h3>
+              <p>
+                Track all the data including important KPI’s like conversion
+                rate, number of leads, email open rate, etc all in one place.
+              </p>
+            </div>
+          </div>
+          <button class="highlight-button jump" id="openModalClub4">
+            Join the Club Now!
+            <span class="button-subtext"
+              >Take your business to the next level</span
+            >
+          </button>
+        </div>
+        <div class="funnel-image">
+          <img src="assets/images/Mask-Group-3.png" alt="Marketing Funnel" />
+        </div>
+      </div>
+    </section>
+    <!-- end funnel2 -->
+
+    <!-- highlight-box -->
+    <section class="highlight-box">
+      <div class="content">
+        <h2>Dedicated Customer Support</h2>
+        <p>
+          With award-winning customer support is matchless. We have a
+          professional, dedicated customer support team working 24*7 ready to
+          serve you.
+        </p>
+      </div>
+    </section>
+    <!-- end highlight-box -->
+
+    <!-- info3 -->
+    <section class="info-section">
+      <div class="info-container">
+        <div class="info-image">
+          <img
+            src="assets/images/Mask-Group-8-1.png"
+            alt="Marketing Dashboard"
+          />
+        </div>
+        <div class="info-content">
+          <div class="info-item">
+            <h3>Switch without Worrying</h3>
+            <p>
+              Are you worried about losing your data before making a switch?
+              Worry not, We have systems in place that ensure the process is as
+              easy as clicking on the button.
+            </p>
+          </div>
+          <div class="info-item">
+            <h3>Streamlined Migration</h3>
+            <p>
+              Data migration is a complex task & with all those third-party
+              tools around; privacy of data cant be ensured. If you aren't sure
+              what to do, we will do it for you. We ensure 100 % privacy.
+            </p>
+          </div>
+          <div class="info-item">
+            <h3>Two-way Communication</h3>
+            <p>
+              Remain connected with your leads 24*7 & never go offline with our
+              mobile version. The ICMCRM works perfectly fine on desktop as well
+              as mobile.
+            </p>
+          </div>
+          <div class="info-item">
+            <h3>We are Listening</h3>
+            <p>Never feel that you are alone. We are available 24*7.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end info3 -->
+
+    <!-- highlight -->
+    <section
+      class="highlight-box"
+      style="background-color: #264c89"
+    >
+      <div class="content" style="margin-bottom: 180px">
+        <h2 style="color: white">Don’t Wait! Be the next ICMCRM’er</h2>
+        <p style="color: white">
+          If you are looking for investors for your business then ICMCRM is for
+          you. Get all the training & resources needed to get you started from
+          our experienced team.
+        </p>
+
+        <button class="highlight-button jump" id="openModalClub5">
+          GET Started
+        </button>
+      </div>
+    </section>
+    <!-- end highlight -->
+
+    <!-- Why Choose Us -->
+    <section class="why-choose-us-section">
+      <h2 id="why-choose-us" class="section-title">Why Choose Us</h2>
+      <div class="features-grid">
+        <div class="feature-item">
+          <img src="assets/images/Group-78.png" alt="Investor Funnel Icon" />
+          <h3>Customised Investor Funnel</h3>
+          <p>
+            We have pre-built high converting investor funnel templates ready
+            for you. Investor funnels help in bringing new leads & those lead to
+            investments.
+          </p>
+        </div>
+        <div class="feature-item">
+          <img src="assets/images/Group-81.png" alt="Lead Generation Icon" />
+          <h3>Lead Generation</h3>
+          <p>
+            With our responsive landing pages & interactive investor forms
+            capturing new leads is easy.
+          </p>
+        </div>
+        <div class="feature-item">
+          <img src="assets/images/Group-78-1.png" alt="Communication Icon" />
+          <h3>Flexible Communication with Investors</h3>
+          <p>
+            Interact with your investors as soon as they land on your website.
+            Respond through webchat integrated with your website without delay.
+          </p>
+        </div>
+        <div class="feature-item">
+          <img src="assets/images/Group-85.png" alt="Calendar Icon" />
+          <h3>Calendar to Automate Appointments</h3>
+          <p>
+            Automate all the appointments, booking & demo requests from
+            investors to avoid chaos.
+          </p>
+        </div>
+        <div class="feature-item">
+          <img src="assets/images/Group-94.png" alt="Messaging Icon" />
+          <h3>Messaging</h3>
+          <p>
+            Automated messaging & email setup solution directly from the
+            dashboard to follow up with your investors.
+          </p>
+        </div>
+        <div class="feature-item">
+          <img src="assets/images/Group-95.png" alt="Email Marketing Icon" />
+          <h3>Email Marketing Tools</h3>
+          <p>
+            With our email marketing tools, you can send targeted emails to your
+            investors with lesser chances of landing in the spam box.
+          </p>
+        </div>
+        <div class="feature-item">
+          <img src="assets/images/Group-96.png" alt="Webinar Icon" />
+          <h3>Ready to Go Webinar Campaigns</h3>
+          <p>
+            Educate your audience by launching webinars through ICMCRM & convert
+            prospects into investors.
+          </p>
+        </div>
+        <div class="feature-item">
+          <img
+            src="assets/images/Group-97.png"
+            alt="Marketing Automation Icon"
+          />
+          <h3>Marketing Automation</h3>
+          <p>
+            Use our pre-built investor funnel & templates or create a new funnel
+            from scratch.
+          </p>
+        </div>
+        <div class="feature-item">
+          <img src="assets/images/Group-98.png" alt="Powerful CRM Icon" />
+          <h3>Powerful CRM</h3>
+          <p>
+            Track, Monitor & Measure all the events related to your business in
+            one place.
+          </p>
+        </div>
+        <div class="feature-item">
+          <img src="assets/images/Group-99.png" alt="Sales Follow-up Icon" />
+          <h3>Sales Follow-up Automation</h3>
+          <p>Get rid of all the complex excel reports & switch to ICMCRM.</p>
+        </div>
+        <div class="feature-item">
+          <img
+            src="assets/images/Group-100.png"
+            alt="Voicemail Automation Icon"
+          />
+          <h3>Voicemail Automation</h3>
+          <p>
+            Pre-record your voice mails with ICMCRM and send automated
+            responses.
+          </p>
+        </div>
+        <div class="feature-item">
+          <img src="assets/images/Group-101.png" alt="Data Imports Icon" />
+          <h3>No Cap on Data Imports</h3>
+          <p>
+            Add as much data as you can, no restrictions. Bring all your leads
+            and start monitoring.
+          </p>
+        </div>
+        <div class="feature-item">
+          <img
+            src="assets/images/3088383_astronomy_launch_rocket_shuttle_space_icon.png"
+            alt="Follow-up Campaigns Icon"
+          />
+          <h3>Launch Follow-up Campaigns</h3>
+          <p>
+            Follow up effectively with your leads using our pre-built templates.
+          </p>
+        </div>
+        <div class="feature-item">
+          <img src="assets/images/Layer-2.png" alt="2-Way Texting Icon" />
+          <h3>2-Way Texting</h3>
+          <p>
+            Never miss an important text from your investors. Swiftly SMS your
+            investors directly.
+          </p>
+        </div>
+        <div class="feature-item">
+          <img src="assets/images/Path-101.png" alt="Customer Support Icon" />
+          <h3>Customer Support & Free Training</h3>
+          <p>
+            With award-winning customer support and free training resources, get
+            matchless service throughout the day.
+          </p>
+        </div>
+      </div>
+      <button class="highlight-button jump" id="openModalClub6">
+        Join the Club Now!
+        <span class="button-subtext">Take your business to the next level</span>
+      </button>
+    </section>
+    <!-- End Why Choose Us -->
+    <!-- faq -->
+    <section id="faq" class="faq-section">
+      <h2 class="faq-title">Frequently Asked Questions</h2>
+      <div class="faq-container">
+        <div class="faq-item">
+          <button class="faq-question">
+            Can I cancel my subscription at any time?
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>
+              Yes, you can cancel your subscription anytime without any
+              questions asked or terms set.
+            </p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            Can I change my plan later on?
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>
+              Yes, you can change your subscription anytime without any
+              questions asked or terms set.
+            </p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            Will you renew my subscription automatically?
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Yes, it will be renewed automatically.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            Can I request a refund?
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>
+              Yes, you can request a refund if you're not satisfied with the
+              service.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div style="text-align: center; margin-top: 50px">
+        <button
+          class="jump"
+          id="openModalClub7"
+          style="
+            padding: 15px 50px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #fff;
+            background: linear-gradient(90deg, #f3672a, #f49d5b, #f3672a);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-transform: uppercase;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+          "
+        >
+          Join the Club Now!
+          <span
+            style="
+              display: block;
+              font-size: 0.8rem;
+              font-weight: normal;
+              margin-top: 5px;
+              opacity: 0.8;
+            "
+          >
+            Take your business to the next level
+          </span>
+        </button>
+      </div>
+    </section>
+    <!-- end faq -->
+    <!-- footer -->
+     <div id="subscriptionModal" class="subscription-modal" style="display: none;">
+  <div class="subscription-modal-content">
+    <span class="subscription-close-modal" id="closeSubscriptionModal">&times;</span>
+    <h2 class="subscription-modal-title">Subscription Confirmed</h2>
+    <p class="subscription-modal-text">
+      Thank you for subscribing to our newsletter! Stay tuned for updates and opportunities.
+    </p>
+  </div>
+</div>
+    <footer class="footer">
+      <div class="newsletter">
+        <h3>Subscribe Our News Letter</h3>
+        <form class="newsletter-form">
+          <input
+            type="email"
+            placeholder="Enter Your Email Address"
+            class="newsletter-input"
+          />
+          <button id="subscribe" type="button" class="newsletter-button">SUBSCRIBE</button>
+        </form>
+      </div>
+      <hr class="footer-divider" />
+      <div class="footer-bottom">
+        <p>
+          Copyright © 2019-2025 Investor Campaign Management. All rights
+          reserved.
+        </p>
+        <div class="footer-links">
+          <a href="/privacy-policy">Privacy Policy</a>
+          <a href="/terms-and-conditions">Terms and Conditions</a>
+        </div>
+      </div>
+    </footer>
+    <!-- end footer -->
+    <script src="/assets/js/app.js"></script>
   </body>
 </html>
