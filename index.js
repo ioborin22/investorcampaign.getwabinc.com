@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
 
 const app = express();
-const port = 3002;
+const port = 3003;
 
 // Set EJS as the template engine
 app.set('view engine', 'ejs');
