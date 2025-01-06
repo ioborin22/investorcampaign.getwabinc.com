@@ -1,7 +1,6 @@
 html {
   scroll-behavior: smooth;
 }
-
 .scroll-to-top {
   position: fixed;
   top: 20px;
@@ -13,12 +12,10 @@ html {
   color: white;
   border: none;
   border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  text-align: center;
   font-size: 24px;
-  font-weight: bold;
   cursor: pointer;
+  display: none;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   transition: opacity 0.3s, transform 0.3s;
   z-index: 99999;
@@ -28,7 +25,6 @@ html {
   transform: translate(-50%, -5px);
   opacity: 0.8;
 }
-
 body {
   margin: 0;
   font-family: 'Lato', sans-serif;
@@ -1604,7 +1600,7 @@ strong {
     margin-bottom: 30px;
   }
   /* end investor */
-  /* purchase */
+/* purchase */
   .purchase-modal-content {
     padding: 15px;
   }
@@ -1620,7 +1616,7 @@ strong {
     font-size: 0.9rem;
   }
   /* end purchase */
-  .pricing-cards .card:nth-child(1) {
+  .card {
     margin-bottom: 200px;
   }
 }
